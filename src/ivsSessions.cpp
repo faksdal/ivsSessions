@@ -18,9 +18,13 @@ ivsSessions::ivsSessions(std::string _inputFileName)
 {
 	str_inputFileName = _inputFileName;
 
-	if(!fileExists(str_inputFileName))
-		errorMessage("Constructor", " Inputfile does not exists: " + str_inputFileName);
+	// If input file does not exist, print an error message and exit
+	if(!fileExists(str_inputFileName)){
+		errorMessage(	"Constructor",
+						" Inputfile does not exists: " + str_inputFileName);
+	}
 
+	// Initialize some variables...
 	d_bound.s_header1_row = 1;
 	d_bound.s_header2_row = 2;
 	d_colors.str_headerColor = "\033[40;00m";
