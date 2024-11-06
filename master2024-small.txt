@@ -1,0 +1,33 @@
+## Master file format version 2.0           2022.11.01 CAD&CCT
+
+                         2024 MULTI-AGENCY SCHEDULE
+
+                     Last Updated - August 14, 2024 - CCT
+
+   SESSION      DATE     SESSION    DOY TIME   DUR                         STATIONS                        SKED CORR  STATUS  DBC  SUBM DEL
+     TYPE     yyyymmdd     CODE     ddd hh:mm  h:mm                                                                  yyyymmdd CODE      days
+--------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R1      |20240102|r11136      |  2|17:00|24:00|AgHtKkKvMaNsOnWz                                      |NASA|BONN|20240112|    |NASA|   9|
+|VGOS-OPS    |20240103|vo4003      |  3|12:00|24:00|GsK2MgOeOwSaWfWs -NnYj                                |NASA|VIEN|20240228|    |NASA|  55|
+|IVS-R4      |20240104|r41136      |  4|18:30|24:00|FtHtKeKkMcNsWz -HbNn                                  |USNO|WASH|20240122|    |USNO|  17|
+|USNO-CRF    |20240105|ug005a      |  5|07:44|24:00|Va                                                    |USNO|VLBA|20240205|    |USNO|  30|
+|IVS-R1      |20240108|r11137      |  8|17:00|24:00|AgHbHtIsKkKvMaNsOnWwWz -KeNn                          |NASA|BONN|20240125|    |NASA|  16|
+|IVS-T2      |20240109|t2165       |  9|17:30|24:00|26FtHtKvNsOnSyWz -Kg                                  |DACH|BONN|20240411|    |BKG |  92|
+|IVS-RD      |20240110|rd2401      | 10|18:00|24:00|FtHhKkKmMcNsOnWz -T6Ur                                |OSO |WASH|20240229|    |NASA|  49|
+|IVS-R4      |20240111|r41137      | 11|18:30|24:00|FtHtKkMaNsWwWz -HbKeNn                                |USNO|WASH|20240125|    |USNO|  13|
+|USNO-CRF    |20240114|ug005b      | 14|16:48|24:00|Va                                                    |USNO|VLBA|20240430|    |USNO| 106|
+|IVS-R1      |20240115|r11138      | 15|17:00|24:00|FtHbHtIsKkKvMaNsWwWz -KeNn                            |NASA|BONN|20240128|    |NASA|  12|
+|VGOS-OPS    |20240117|vo4017      | 17|12:00|24:00|GsHbIsK2MgOeOwSaWfWsYj -Nn                            |NASA|WASH|20240223|    |NASA|  36|
+|IVS-R4      |20240118|r41138      | 18|18:30|24:00|BdFtHtKkNsSvWwWzZc -HbKeNn                            |USNO|WASH|20240202|    |USNO|  14|
+|IVS-R1      |20240122|r11139      | 22|17:00|24:00|AgHbHtIsKkKvNsOnWwWz -KeNn                            |NASA|BONN|20240130|    |NASA|   7|
+|VGOS-24INT-S|20240122|s22417      | 22|17:00|24:00|MgWs                                                  |DACH|WETZ|Wt_med  |    |NASA| 204|
+|IVS-CRF     |20240123|crf140      | 23|17:30|24:00|HhHoYs -Ur                                            |DACH|SHAO|20240507|    |USNO| 104|
+|VGOS-OPS    |20240124|vo4024      | 24|12:00|24:00|GsHbIsK2MgOeOwSaWfWsYj -Nn                            |NASA|BONN|20240215|    |NASA|  21|
+|AOV         |20240125|aov091      | 25|12:30|24:00|HbIsKm -KeUrYg                                        |SHAO|SHAO|20240523|    |NASA| 118|
+|IVS-R4      |20240125|r41139      | 25|18:30|24:00|BdFtHtKkMcNsUrWwWzZc -NnSv                            |USNO|WASH|20240206|    |USNO|  11|
+|IVS-R1      |20240129|r11140      | 29|17:00|24:00|AgFtHbHtIsKvMcNsOnWz -KeNn                            |NASA|BONN|20240207|    |NASA|   8|
+|AUS-AST     |20240130|aua108      | 30|17:30|24:00|HbHoHtWw -KeYg                                        |DACH|UTAS|20240305|    |NASA|  34|
+|IVS-RD      |20240131|rd2402      | 31|18:00|24:00|FtHhKkMaNsOnWz                                        |OSO |WASH|Ready   |    |NASA| 195|
+--------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R4      |20240201|r41140      | 32|18:30|24:00|BdFtHtKkNsNtSvWzZc -HbKeNnUr                          |USNO|WASH|20240216|    |USNO|  14|
+## Master file format version 2.0           2022.11.01 CAD&CCT
