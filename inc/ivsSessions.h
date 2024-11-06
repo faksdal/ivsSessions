@@ -116,6 +116,7 @@ private:
 	void	parser(void);
 	void	addListItem(void);
 
+	// TODO: have a look at these, seee if they can be deleted
 	//unsigned long		ul_inputBufferIndex;
 	//bool	setIntensiveFlag(void);
 //////////////////////////////// P A R S I N G /////////////////////////////////
@@ -193,6 +194,8 @@ private:
 	void	printSession(	short _row,
 							unsigned long _sessionId,
 							std::string _sessionColor);
+
+	void	redrawList(void);
 
 ///////////////////////// T E R M I N A L  O U T P U T /////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
