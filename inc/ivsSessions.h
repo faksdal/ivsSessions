@@ -163,10 +163,10 @@ private:
 	// Various parameters for screen and list boundaries
 	class displayBoundaries{
 	public:
-		int	s_total_rows,
-			s_total_columns,
-			s_header1_row,
-			s_header2_row,
+		int	i_total_rows,
+			i_total_columns,
+			i_header1_row,
+			i_header2_row,
 			i_list_start_row,
 			i_list_end_row;
 
@@ -176,6 +176,9 @@ private:
 						terminal_current_topmost_session;
 
 	};
+
+	// Hold terminal properties for restoring upon exit
+	struct termios	originalTermios;
 
 	// Color defs for terminal output, restricted to highlight and regular,
 	class displayColors{
@@ -196,6 +199,8 @@ private:
 							std::string _sessionColor);
 
 	void	setupDisplay(void);
+	void	saveTerminalState(void);
+	void	restoreTerminalState(void);
 	void	getTerminalSize(void);
 	void	clearScreen(void);
 	void	clearLines(int _startLine, int _numLines);
@@ -267,7 +272,7 @@ class ivsSessions{
 	void	saveTerminalState(termios &_originalTermios);
 	void	restoreTerminalState(const termios &_originalTermios);
 	void	die(const char *s);
-	void	moveCursor(int _x, int _y);
+	void	moveCursor(int _column, int _row);
 
 
 
@@ -292,24 +297,6 @@ class ivsSessions{
 ///////////////////F I L T E R  D E F I N I T I O N S///////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-
-
-public:
-	////////////////////////////////////////////////////////////////////////////
-	//
-	// Public constructor and destructor
-	//
-	ivsSessions(std::string _inputFileName);
-	virtual ~ivsSessions();
-	////////////////////////////////////////////////////////////////////////////
-
-
-	////////////////////////////////////////////////////////////////////////////
-	//
-	// Public function to run the class object
-	//
-	void run(void);
-	////////////////////////////////////////////////////////////////////////////
 };
 ///////////////// C L A S S  D E F I N I T I O N ///////////////////////////////
 ///////////////////// i v s S e s s i o n s ////////////////////////////////////

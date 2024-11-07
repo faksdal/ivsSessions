@@ -11,11 +11,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 //
 // ivsSessions::errorMessage prints an errormessage to stderr, and exits
+// It restores terminal configuration before exiting.
 //
 ////////////////////////////////////////////////////////////////////////////////
 void ivsSessions::errorMessage(const std::string _callerId, const std::string _message)
 {
 	std::cerr << _callerId << " reported an error. " << _message << "\r\n" << std::flush;
 	std::cerr << "Exiting... \r\n" << std::flush;
-	exit(0);
+	restoreTerminalState();
+	exit(1);
 }

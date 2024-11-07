@@ -26,7 +26,9 @@ int ivsSessions::run(void)
 
 	printHeaders();
 
-	std::cout << "\r\n\r\n columns x rows: " << d_bound.s_total_columns << " x " << d_bound.s_total_rows << "\r\n" << std::flush;
+	std::cout << "\r\n\r\n columns x rows: " << d_bound.i_total_columns << " x " << d_bound.i_total_rows << "\r\n" << std::flush;
+
+	restoreTerminalState();
 
 	return(0);
 }

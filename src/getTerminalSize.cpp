@@ -27,6 +27,6 @@ void ivsSessions::getTerminalSize(void)
 	}
 
 	// Store terminal size
-	d_bound.s_total_columns	= ws.ws_col;
-	d_bound.s_total_rows	= ws.ws_row;
+	d_bound.i_total_columns	= ws.ws_col;
+	d_bound.i_total_rows	= ws.ws_row;
 }

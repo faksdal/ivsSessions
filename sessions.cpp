@@ -68,7 +68,7 @@ int main(int argc, char **argv)
 		ivsSessions *s = new ivsSessions(inputFileName);
 
 		if(!s)
-			exit(0);
+			exit(1);
 
 		s->run();
 	}
@@ -80,6 +80,6 @@ int main(int argc, char **argv)
 
 	//*************************************************************************
 
-    return(1);
+    return(0);
 }
 

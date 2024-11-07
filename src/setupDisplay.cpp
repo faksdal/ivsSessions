@@ -16,12 +16,13 @@
 ////////////////////////////////////////////////////////////////////////////////
 void ivsSessions::setupDisplay(void)
 {
+	saveTerminalState();
 	clearScreen();
 	getTerminalSize();	// loads terminal size into memory, rows and columns
 
 	// Initialize some variables...
-	d_bound.s_header1_row = 1;
-	d_bound.s_header2_row = 2;
+	d_bound.i_header1_row = 1;
+	d_bound.i_header2_row = 2;
 	d_colors.str_headerColor = "\033[40;00m";
 
 
