@@ -29,7 +29,7 @@ void ivsSessions::processKeypress(bool& _quit)
 							//	break;
 							//db.terminal_current_highlighted_row--;
 							//db.terminal_current_highlighted_session--;
-							//redraw(LIST_OFFSET_UP_ARROW);
+							//redrawSession(UP_ARROW);
 							break;
 
 		case DOWN_ARROW:	//if(	db.terminal_current_highlighted_row == db.terminal_list_end_row ||
@@ -38,7 +38,7 @@ void ivsSessions::processKeypress(bool& _quit)
 
 							//db.terminal_current_highlighted_row++;
 							//db.terminal_current_highlighted_session++;
-							//redraw(LIST_OFFSET_DOWN_ARROW);
+							//redrawSession(DOWN_ARROW);
 							break;
 
 		case ESC:			// Yeah, user wants to quit this thing...
@@ -77,13 +77,17 @@ void ivsSessions::processKeypress(bool& _quit)
 							c_where.i_column++;
 
 							// Convedt to CAPS, and print to terminal
-							std::cout << d_colors.str_filter_passive_color << (char)std::toupper((char)key) << std::flush;
+							// I skipped the CAPS
+							//std::cout << d_colors.str_filter_passive_color << (char)std::toupper((char)key) << std::flush;
+							std::cout << d_colors.str_filter_passive_color << (char)key << std::flush;
 
 							// Append CAPS key to active filter text
-							vl_filter[getActiveFilterIndex()].str_filterText.append(1, (char)std::toupper((char)key));
+							// I skipped the CAPS
+							//vl_filter[getActiveFilterIndex()].str_filterText.append(1, (char)std::toupper((char)key));
+							vl_filter[getActiveFilterIndex()].str_filterText.append(1, (char)key);
 
 							// Here we need to write some code to apply filter
-							// I guess I'll need to print the list first...
+							// But, I guess I'll need to print the darn thing first...
 
 							break;
 	}

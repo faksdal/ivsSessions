@@ -13,25 +13,27 @@
 ////////////////////////////////////////////////////////////////////////////////
 void ivsSessions::nextFilter(void)
 {
-	/*
+
 	unsigned long i;
 
-	for(i = 0; i < filter.size(); i++){
-		if(filter[i].active){
-			filter[i].active = false;
-			if(i+1 == filter.size()){
+	for(i = 0; i < vl_filter.size(); i++){
+		if(vl_filter[i].b_active){
+			vl_filter[i].b_active = false;
+			if(i+1 == vl_filter.size()){
 				i = 0;
-				filter[i].active = true;
+				vl_filter[i].b_active = true;
 				break;
 			}
 			else{
 				i++;
-				filter[i].active = true;
+				vl_filter[i].b_active = true;
 				break;
 			}
 		}
 	}
+	setFocusActiveFilter();
 
+	/*
 	kb.cursorColumn	=  filter[i].filterColumn;
 	kb.cursorRow	=  filter[i].filterRow;
 	kb.moveCursor(kb.cursorColumn, kb.cursorRow);

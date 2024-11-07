@@ -172,10 +172,12 @@ private:
 			i_list_end_row;
 
 		int	i_current_highlighted_row;
+	};
 
+	class listTracking{
+	public:
 		unsigned long	ul_current_highlighted_session,
 						ul_current_topmost_session;
-
 	};
 
 	// Color defs for terminal output, restricted to highlight and regular,
@@ -196,6 +198,7 @@ private:
 	displayColors		d_colors;
 	displayBoundaries	d_bound;
 	cursorLocation		c_where;
+	listTracking		l_track;
 
 	// Hold terminal properties for restoring upon exit
 	struct termios	originalTermios;
@@ -209,7 +212,7 @@ private:
 							unsigned long _sessionId,
 							std::string _sessionColor);
 
-	// Inline functions
+	// Inline functions ////////////////////////////////////////////////////////
 	void	setColor(const std::string _color)
 				{ std::cout << _color << std::flush; }
 	void	resetColor(void)
@@ -220,7 +223,7 @@ private:
 				{ std::cout << "\033[?25l" << std::flush; }
 	void	showCursor(void)
 				{ std::cout << "\033[?25h" << std::flush; }
-	///////////////////
+	////////////////////////////////////////////////////////////////////////////
 
 	void	setupDisplay(void);
 	void	saveTerminalState(void);
@@ -228,8 +231,7 @@ private:
 	void	getTerminalSize(void);
 	void	clearScreen(void);
 	void	clearLines(int _startLine, int _numLines);
-
-	void	redrawList(void);
+	void	redrawSessions(int _key);
 
 ///////////////////////// T E R M I N A L  O U T P U T /////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
@@ -251,6 +253,7 @@ private:
 
 ////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////// F I L T E R S /////////////////////////////////
+private:
 	class Filter{
 	public:
 		int			i_filterColumn, i_filterRow, i_fieldLength;
@@ -272,73 +275,23 @@ private:
 	void	nextFilter(void);
 	int		getActiveFilterIndex(void);
 
-
-	//
 	//void	printFilters(void);
-
-	//
 //////////////////////////////// F I L T E R S /////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+//////////// i v s S e s s i o n s  c l a s s  d e f i n i t i o n /////////////
 ////////////////////////////////////////////////////////////////////////////////
 };
 
 /*
-//////////// i v s S e s s i o n s  c l a s s  d e f i n i t i o n /////////////
-////////////////////////////////////////////////////////////////////////////////
-
-
-
-///////////////// C L A S S  D E F I N I T I O N ///////////////////////////////
-///////////////////// i v s S e s s i o n s ////////////////////////////////////
-//
-// Class definition, ivsSessions
-//
-class ivsSessions{
-
-
-
-/////////////// K E Y B O A R D  I N P U T ///////////////////////////////////
-//
-// Private functions and variables related to keybard input
-//
-	keyboard		kb;
-
-	void	processKeypress(bool& _quit);
-
-
-/////////////// K E Y B O A R D  I N P U T ///////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
-
-
-////////////// T E R M I N A L  O U T P U T ////////////////////////////////////
-//
-// Private variables and functions related to terminal output
-//
-
-
-	std::string	itemListColor;
-
-	displayBoundaries db;
-
-	void	saveTerminalState(termios &_originalTermios);
-	void	restoreTerminalState(const termios &_originalTermios);
-	void	die(const char *s);
-
-
-
-
-
 	void	printSessionList(void);
-	void	printSession(short _row, unsigned long _sessionId, std::string _sessionColor);
+
 	void	redraw(short _offset);
 	void	updateSessionListDisplay(void);
-////////////// T E R M I N A L  O U T P U T ////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
-
-};
-///////////////// C L A S S  D E F I N I T I O N ///////////////////////////////
-///////////////////// i v s S e s s i o n s ////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
-
 */
+
+
+
+

@@ -30,8 +30,15 @@ int ivsSessions::run(void)
 	// Prints header text to terminal
 	printHeaders();
 
-	// Prepares filters
+	// Prepares and prints filters
 	setupFilters();
+
+	// Initialize list tracking variables
+	l_track.ul_current_highlighted_session	= 0;
+	l_track.ul_current_topmost_session		= 0;
+
+	// Print session list to terminal
+	redrawSessions(0);
 
 	// Set keyboard input in raw mode
 	enableRawmode();

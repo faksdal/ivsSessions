@@ -22,8 +22,9 @@ void ivsSessions::setFocusActiveFilter(void)
 	moveCursor(vl_filter[i].i_filterColumn, vl_filter[i].i_filterRow);
 
 	// Update cursor location
-	c_where.i_column	= vl_filter[i].i_filterColumn;
+	c_where.i_column	= vl_filter[i].i_filterColumn + vl_filter[i].str_filterText.size();
 	c_where.i_row		= vl_filter[i].i_filterRow;
+	moveCursor(c_where.i_column, c_where.i_row);
 
 	showCursor();
 }

@@ -7,11 +7,13 @@
 
 #include "ivsSessions.h"
 
+
+
 ////////////////////////////////////////////////////////////////////////////////
 // Prints a single session, _sessionId, at row _row, using _sessionColor
 // Calls function print() to do the actual printing.
 // Function print() is responsible for turning the cursor off during printing, and
-// back on after it's done.//
+// back on after it's done.
 ////////////////////////////////////////////////////////////////////////////////
 void ivsSessions::printSession(short _row, unsigned long _sessionId, std::string _sessionColor)
 {
