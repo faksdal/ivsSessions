@@ -163,14 +163,14 @@ private:
 	// Various parameters for screen and list boundaries
 	class displayBoundaries{
 	public:
-		short	s_total_rows,
-				s_total_columns,
-				s_header1_row,
-				s_header2_row,
-				i_list_start_row,
-				i_list_end_row;
+		int	s_total_rows,
+			s_total_columns,
+			s_header1_row,
+			s_header2_row,
+			i_list_start_row,
+			i_list_end_row;
 
-		short	terminal_current_highlighted_row;
+		int	terminal_current_highlighted_row;
 
 		unsigned long	terminal_current_highlighted_session,
 						terminal_current_topmost_session;
@@ -194,6 +194,11 @@ private:
 	void	printSession(	short _row,
 							unsigned long _sessionId,
 							std::string _sessionColor);
+
+	void	setupDisplay(void);
+	void	getTerminalSize(void);
+	void	clearScreen(void);
+	void	clearLines(int _startLine, int _numLines);
 
 	void	redrawList(void);
 
@@ -263,13 +268,10 @@ class ivsSessions{
 	void	restoreTerminalState(const termios &_originalTermios);
 	void	die(const char *s);
 	void	moveCursor(int _x, int _y);
-	void	print(int _x, int _y, std::string _text);
-	void	print(int _x, int _y, unsigned long _num);
-	void	setupDisplay(void);
-	void	terminalSize(void);
-	void	clearScreen(void);
-	void	clearLines(int _startLine, int _numLines);
-	void	printHeaders(void);
+
+
+
+
 	void	printSessionList(void);
 	void	printSession(short _row, unsigned long _sessionId, std::string _sessionColor);
 	void	redraw(short _offset);

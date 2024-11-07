@@ -23,11 +23,6 @@ ivsSessions::ivsSessions(std::string _inputFileName)
 		errorMessage(	"Constructor",
 						" Inputfile does not exists: " + str_inputFileName);
 	}
-
-	// Initialize some variables...
-	d_bound.s_header1_row = 1;
-	d_bound.s_header2_row = 2;
-	d_colors.str_headerColor = "\033[40;00m";
 }
 
 

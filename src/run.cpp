@@ -21,7 +21,12 @@ int ivsSessions::run(void)
 	// Parse the input buffer, and populate sessions list
 	parser();
 
+	// Sets up display for use
+	setupDisplay();
+
 	printHeaders();
+
+	std::cout << "\r\n\r\n columns x rows: " << d_bound.s_total_columns << " x " << d_bound.s_total_rows << "\r\n" << std::flush;
 
 	return(0);
 }
