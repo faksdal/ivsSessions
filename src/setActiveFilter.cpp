@@ -12,7 +12,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 //	Places the cursor in the active filter, and displays it
 ////////////////////////////////////////////////////////////////////////////////
-void ivsSessions::setActiveFilter(void)
+void ivsSessions::setFocusActiveFilter(void)
 {
 	int i = 0;
 
@@ -20,5 +20,10 @@ void ivsSessions::setActiveFilter(void)
 	i--;
 
 	moveCursor(vl_filter[i].i_filterColumn, vl_filter[i].i_filterRow);
+
+	// Update cursor location
+	c_where.i_column	= vl_filter[i].i_filterColumn;
+	c_where.i_row		= vl_filter[i].i_filterRow;
+
 	showCursor();
 }

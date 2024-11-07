@@ -116,7 +116,7 @@ private:
 	void	parser(void);
 	void	addListItem(void);
 
-	// TODO: have a look at these, seee if they can be deleted
+	// TODO: have a look at these, see if they can be deleted
 	//unsigned long		ul_inputBufferIndex;
 	//bool	setIntensiveFlag(void);
 //////////////////////////////// P A R S I N G /////////////////////////////////
@@ -167,7 +167,6 @@ private:
 			i_total_columns,
 			i_header1_row,
 			i_header2_row,
-			//i_filter_column,
 			i_filter_row,
 			i_list_start_row,
 			i_list_end_row;
@@ -179,9 +178,6 @@ private:
 
 	};
 
-	// Hold terminal properties for restoring upon exit
-	struct termios	originalTermios;
-
 	// Color defs for terminal output, restricted to highlight and regular,
 	class displayColors{
 	public:
@@ -191,8 +187,18 @@ private:
 		std::string	str_filter_active_color;
 	};
 
+	// Keeps track of the cursor location
+	class cursorLocation{
+	public:
+		int	i_column, i_row;
+	};
+
 	displayColors		d_colors;
 	displayBoundaries	d_bound;
+	cursorLocation		c_where;
+
+	// Hold terminal properties for restoring upon exit
+	struct termios	originalTermios;
 
 	void	print(int _x, int _y, std::string _text);
 	void	print(int _x, int _y, unsigned long _text);
@@ -247,7 +253,7 @@ private:
 //////////////////////////////// F I L T E R S /////////////////////////////////
 	class Filter{
 	public:
-		int			i_filterColumn, i_filterRow;
+		int			i_filterColumn, i_filterRow, i_fieldLength;
 		bool		b_active;
 		std::string	str_filterName, str_filterText, str_filterColor;
 	};
@@ -257,15 +263,19 @@ private:
 	void	setupFilters(void);
 	void	addFilter(	int		_filterColumn,
 						int		_filterRow,
+						int		_fieldLength,
 						bool	_active,
 						std::string	_filterName,
 						std::string	_filterText,
 						std::string	_filterColor);
-	void	setActiveFilter(void);
+	void	setFocusActiveFilter(void);
+	void	nextFilter(void);
+	int		getActiveFilterIndex(void);
+
 
 	//
 	//void	printFilters(void);
-	//void	nextFilter(void);
+
 	//
 //////////////////////////////// F I L T E R S /////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

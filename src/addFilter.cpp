@@ -14,6 +14,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 void ivsSessions::addFilter(	int			_filterColumn,
 								int			_filterRow,
+								int			_fieldLength,
 								bool		_active,
 								std::string	_filterName,
 								std::string	_filterText,
@@ -21,6 +22,7 @@ void ivsSessions::addFilter(	int			_filterColumn,
 {
 	vl_filter.push_back({	_filterColumn,
 							_filterRow,
+							_fieldLength,
 							_active,
 							_filterName,
 							_filterText,

@@ -21,7 +21,7 @@ int ivsSessions::run(void)
 	// Call readFile to read inputfile and populate str_inputBuffer.
 	readFile();
 
-	// Parse the input buffer, and populate sessions list
+	// Parse str_inputBuffer, and populate sessions list
 	parser();
 
 	// Sets up display for use
@@ -30,22 +30,23 @@ int ivsSessions::run(void)
 	// Prints header text to terminal
 	printHeaders();
 
-	// Prepares and prints filter input fields
+	// Prepares filters
 	setupFilters();
 
+	// Set keyboard input in raw mode
 	enableRawmode();
-	setActiveFilter();
-	setColor("\033[31;41m");
-	std::cout << "\x1b[0 q" << std::flush;
-	moveCursor(5, 3);
-	showCursor();
 
+	// Shift focus to the active filter, and update cursor location
+	setFocusActiveFilter();
+
+	// This is the main loop of this circus
 	while(!b_quit){
 		processKeypress(b_quit);
-		// here, I can do other stuff
+		// Here, I can do other stuff. Coffee anyone?
 
 	} // while(!quit)
 
+	// Reset keyboard to previous state
 	disableRawmode();
 
 	// Restore terminal state before we exit
@@ -54,7 +55,7 @@ int ivsSessions::run(void)
 
 	// Reset color and print a new line before exiting
 	resetColor();
-	std::cout << "\r\n" << std::flush;
+	std::cout << "Thank you for using ivsSessions v1\r\n" << std::flush;
 
 	return(0);
 }
