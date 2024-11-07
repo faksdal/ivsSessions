@@ -8,11 +8,10 @@
 #include "ivsSessions.h"
 
 ////////////////////////////////////////////////////////////////////////////////
-//
 // Sets up the display:
 //		* clears the screen
-//		* set the various display parameters
-//
+//		* sets the various display parameters
+//		* sets the color scheme
 ////////////////////////////////////////////////////////////////////////////////
 void ivsSessions::setupDisplay(void)
 {
@@ -20,10 +19,18 @@ void ivsSessions::setupDisplay(void)
 	clearScreen();
 	getTerminalSize();	// loads terminal size into memory, rows and columns
 
-	// Initialize some variables...
-	d_bound.i_header1_row = 1;
-	d_bound.i_header2_row = 2;
-	d_colors.str_headerColor = "\033[40;00m";
+	// Default color init
+	d_colors.str_default_color	= "\033[40;00m";
+
+	// Initialize header vars
+	d_bound.i_header1_row		= 1;
+	d_bound.i_header2_row		= 2;
+	d_colors.str_header_color	= "\033[40;00m";
+
+	// Initialize filter vars
+	d_bound.i_filter_row				= 3;
+	d_colors.str_filter_active_color	= "\033[30;102m";
+	d_colors.str_filter_passive_color	= "\033[30;47m";
 
 
 	//db.terminal_header_1_row	= 2;

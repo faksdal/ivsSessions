@@ -167,13 +167,15 @@ private:
 			i_total_columns,
 			i_header1_row,
 			i_header2_row,
+			//i_filter_column,
+			i_filter_row,
 			i_list_start_row,
 			i_list_end_row;
 
-		int	terminal_current_highlighted_row;
+		int	i_current_highlighted_row;
 
-		unsigned long	terminal_current_highlighted_session,
-						terminal_current_topmost_session;
+		unsigned long	ul_current_highlighted_session,
+						ul_current_topmost_session;
 
 	};
 
@@ -183,7 +185,10 @@ private:
 	// Color defs for terminal output, restricted to highlight and regular,
 	class displayColors{
 	public:
-		std::string	str_headerColor;
+		std::string	str_default_color;
+		std::string	str_header_color;
+		std::string	str_filter_passive_color;
+		std::string	str_filter_active_color;
 	};
 
 	displayColors		d_colors;
@@ -197,6 +202,19 @@ private:
 	void	printSession(	short _row,
 							unsigned long _sessionId,
 							std::string _sessionColor);
+
+	// Inline functions
+	void	setColor(const std::string _color)
+				{ std::cout << _color << std::flush; }
+	void	resetColor(void)
+				{ setColor(d_colors.str_default_color); }
+	void	moveCursor(int _column, int _row)
+				{ std::cout << "\033[" << _row << ";" << _column << "H" << std::flush; }
+	void	hideCursor(void)
+				{ std::cout << "\033[?25l" << std::flush; }
+	void	showCursor(void)
+				{ std::cout << "\033[?25h" << std::flush; }
+	///////////////////
 
 	void	setupDisplay(void);
 	void	saveTerminalState(void);
@@ -214,10 +232,42 @@ private:
 
 ////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////// K E Y B O A R D ////////////////////////////////
+
 private:
-	void	hideCursor(void) { std::cout << "\033[?25l" << std::flush; }
-	void	showCursor(void) { std::cout << "\033[?25h" << std::flush; }
+	void	disableRawmode(void);
+	void	enableRawmode(void);
+	int		readkey(int _fd);
+	void	processKeypress(bool& _quit);
 /////////////////////////////// K E Y B O A R D ////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////// F I L T E R S /////////////////////////////////
+	class Filter{
+	public:
+		int			i_filterColumn, i_filterRow;
+		bool		b_active;
+		std::string	str_filterName, str_filterText, str_filterColor;
+	};
+
+	std::vector<Filter>	vl_filter;
+
+	void	setupFilters(void);
+	void	addFilter(	int		_filterColumn,
+						int		_filterRow,
+						bool	_active,
+						std::string	_filterName,
+						std::string	_filterText,
+						std::string	_filterColor);
+	void	setActiveFilter(void);
+
+	//
+	//void	printFilters(void);
+	//void	nextFilter(void);
+	//
+//////////////////////////////// F I L T E R S /////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 };
 
@@ -225,15 +275,6 @@ private:
 //////////// i v s S e s s i o n s  c l a s s  d e f i n i t i o n /////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-
-/////////////F I L T E R  C L A S S  D E F I N I T I O N////////////////////////
-class Filter{
-public:
-	int			filterColumn, filterRow;
-	bool		active;
-	std::string	filterName, filterText, filterColor;
-};
-////////////////////////////////////////////////////////////////////////////////
 
 
 ///////////////// C L A S S  D E F I N I T I O N ///////////////////////////////
@@ -272,7 +313,7 @@ class ivsSessions{
 	void	saveTerminalState(termios &_originalTermios);
 	void	restoreTerminalState(const termios &_originalTermios);
 	void	die(const char *s);
-	void	moveCursor(int _column, int _row);
+
 
 
 
@@ -284,18 +325,6 @@ class ivsSessions{
 ////////////// T E R M I N A L  O U T P U T ////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
-///////////////////F I L T E R  D E F I N I T I O N S///////////////////////////
-
-
-	std::vector<Filter>	filter;
-
-	void	setupFilters(void);
-	void	printFilters(void);
-	void	nextFilter(void);
-	void	addFilter(int _key);
-
-///////////////////F I L T E R  D E F I N I T I O N S///////////////////////////
-////////////////////////////////////////////////////////////////////////////////
 
 };
 ///////////////// C L A S S  D E F I N I T I O N ///////////////////////////////

@@ -15,6 +15,9 @@
 ////////////////////////////////////////////////////////////////////////////////
 int ivsSessions::run(void)
 {
+	bool	b_quit = false;
+
+
 	// Call readFile to read inputfile and populate str_inputBuffer.
 	readFile();
 
@@ -24,11 +27,34 @@ int ivsSessions::run(void)
 	// Sets up display for use
 	setupDisplay();
 
+	// Prints header text to terminal
 	printHeaders();
 
-	std::cout << "\r\n\r\n columns x rows: " << d_bound.i_total_columns << " x " << d_bound.i_total_rows << "\r\n" << std::flush;
+	// Prepares and prints filter input fields
+	setupFilters();
 
+	enableRawmode();
+	setActiveFilter();
+	setColor("\033[31;41m");
+	std::cout << "\x1b[0 q" << std::flush;
+	moveCursor(5, 3);
+	showCursor();
+
+	while(!b_quit){
+		processKeypress(b_quit);
+		// here, I can do other stuff
+
+	} // while(!quit)
+
+	disableRawmode();
+
+	// Restore terminal state before we exit
 	restoreTerminalState();
+
+
+	// Reset color and print a new line before exiting
+	resetColor();
+	std::cout << "\r\n" << std::flush;
 
 	return(0);
 }

@@ -17,6 +17,6 @@
 ////////////////////////////////////////////////////////////////////////////////
 void ivsSessions::printHeaders(void)
 {
-	print(1, d_bound.i_header1_row, d_colors.str_headerColor + str_header1);
-	print(1, d_bound.i_header2_row, d_colors.str_headerColor + str_header2);
+	print(1, d_bound.i_header1_row, d_colors.str_header_color + str_header1);
+	print(1, d_bound.i_header2_row, d_colors.str_header_color + str_header2);
 }

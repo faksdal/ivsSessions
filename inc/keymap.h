@@ -5,8 +5,10 @@
  *      Author: jole
  */
 
-#ifndef KEYMAP_H_
-#define KEYMAP_H_
+#pragma once
+
+//#ifndef KEYMAP_H_
+//#define KEYMAP_H_
 
 enum KEYMAP{
 	TAB			= 9,
@@ -39,4 +41,4 @@ enum KEYMAP{
 	PAGE_DOWN
 };
 
-#endif /* KEYMAP_H_ */
+//#endif /* KEYMAP_H_ */
