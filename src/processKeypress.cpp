@@ -77,10 +77,16 @@ void ivsSessions::processKeypress(bool& _quit)
 							vl_filter[getActiveFilterIndex()].str_filterText.append(1, (char)key);
 
 							// Here we need to write some code to apply filter
-							// But, I guess I'll need to print the darn thing first...
 
 							break;
 	}
+	//print(40, 3, "Current highlighted session: ");
+	//print(70, 3, "   ");
+	//print(70, 3, l_track.ul_current_highlighted_session);
+	//print(75, 3, "Current highlighted row: ");
+	//print(101, 3, "   ");
+	//print(101, 3, l_track.ul_current_highlighted_row);
+
 	setFocusActiveFilter();
 
 }
