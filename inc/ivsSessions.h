@@ -151,6 +151,9 @@ private:
 
 	// Dynamic list to hold all sessions
 	std::vector<SessionList>	vl_sessionList;
+
+	unsigned long	nextVisibleSession(unsigned long _startItem);
+	unsigned long	previousVisibleSession(unsigned long _startItem);
 //////////////////////////// S E S S I O N L I S T /////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -177,7 +180,8 @@ private:
 	class listTracking{
 	public:
 		unsigned long	ul_current_highlighted_session,
-						ul_current_topmost_session;
+						ul_current_topmost_session,
+						ul_current_highlighted_row;
 	};
 
 	// Color defs for terminal output, restricted to highlight and regular,
@@ -234,8 +238,8 @@ private:
 	void	clearLines(int _startLine, int _numLines);
 	void	redrawSessions(int _key);
 	void	updateListTracking(	unsigned int _current_highlighted_session,
-								unsigned int _current_topmost_session);
-
+								unsigned int _current_topmost_session,
+								unsigned int _current_highlighted_row);
 ///////////////////////// T E R M I N A L  O U T P U T /////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 

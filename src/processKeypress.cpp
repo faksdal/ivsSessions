@@ -25,20 +25,10 @@ void ivsSessions::processKeypress(bool& _quit)
 							nextFilter();
 							break;
 
-		case UP_ARROW:		//if(db.terminal_current_highlighted_row == db.terminal_list_start_row)
-							//	break;
-							//db.terminal_current_highlighted_row--;
-							//db.terminal_current_highlighted_session--;
-							//redrawSession(UP_ARROW);
+		case UP_ARROW:		redrawSessions(UP_ARROW);
 							break;
 
-		case DOWN_ARROW:	//if(	db.terminal_current_highlighted_row == db.terminal_list_end_row ||
-							//	db.terminal_current_highlighted_row >= db.terminal_list_start_row + sessionList.size() - 1)	// See #pragma... at top
-							//	break;
-
-							//db.terminal_current_highlighted_row++;
-							//db.terminal_current_highlighted_session++;
-							//redrawSession(DOWN_ARROW);
+		case DOWN_ARROW:	redrawSessions(DOWN_ARROW);
 							break;
 
 		case ESC:			// Yeah, user wants to quit this thing...
@@ -91,5 +81,6 @@ void ivsSessions::processKeypress(bool& _quit)
 
 							break;
 	}
+	setFocusActiveFilter();
 
 }
