@@ -1,4 +1,6 @@
 debug/*
+bin/*
+obj/*.*
 
 .project
 .cproject
