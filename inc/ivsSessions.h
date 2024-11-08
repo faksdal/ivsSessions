@@ -187,6 +187,7 @@ private:
 		std::string	str_header_color;
 		std::string	str_filter_passive_color;
 		std::string	str_filter_active_color;
+		std::string	str_list_highlighted_color;
 	};
 
 	// Keeps track of the cursor location
@@ -232,6 +233,8 @@ private:
 	void	clearScreen(void);
 	void	clearLines(int _startLine, int _numLines);
 	void	redrawSessions(int _key);
+	void	updateListTracking(	unsigned int _current_highlighted_session,
+								unsigned int _current_topmost_session);
 
 ///////////////////////// T E R M I N A L  O U T P U T /////////////////////////
 ////////////////////////////////////////////////////////////////////////////////

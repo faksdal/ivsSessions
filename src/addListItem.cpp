@@ -15,6 +15,7 @@
 void ivsSessions::addListItem(void)
 {
 
+	//std::cout << d_colors.str_default_color + "\r\nAdding an item to the list.\r\n" << std::flush;
 
 	// Add the current line to the list
 	vl_sessionList.push_back({	str_sessionType,

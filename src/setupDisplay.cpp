@@ -20,7 +20,8 @@ void ivsSessions::setupDisplay(void)
 	getTerminalSize();	// loads terminal size into memory, rows and columns
 
 	// Default color init
-	d_colors.str_default_color	= "\033[40;00m";
+	d_colors.str_default_color			= "\033[40;00m";
+	d_colors.str_list_highlighted_color	=	"\033[30;102m";
 
 	// Initialize header vars
 	d_bound.i_header1_row		= 1;
@@ -31,6 +32,10 @@ void ivsSessions::setupDisplay(void)
 	d_bound.i_filter_row				= 3;
 	d_colors.str_filter_active_color	= "\033[30;102m";
 	d_colors.str_filter_passive_color	= "\033[30;47m";
+
+	// Set display size vars
+	d_bound.i_list_start_row	= d_bound.i_filter_row + 1;
+	d_bound.i_list_end_row		= d_bound.i_total_rows - 2;
 
 
 	//db.terminal_header_1_row	= 2;

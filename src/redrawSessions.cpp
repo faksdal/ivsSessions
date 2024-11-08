@@ -5,6 +5,7 @@
  *      Author: jole
  */
 
+#include "keymap.h"
 #include "ivsSessions.h"
 
 
@@ -28,33 +29,37 @@ void ivsSessions::redrawSessions(int _key)
 {
 	int row;
 
-	//			There are three situations we can encounter:
-	//
-	//	1 -	The highlighted item are between the boundaries, and we just need
-	//		to move the highlighted area on screen. This does not involve
-	//		scrolling of the list.
-	//
-	//	2 -	We are at either lower or upper screen boundary, and need to
-	//		scroll the list. This calls for redrawing of the whole screen.
-	//
-	//	3 -	We are at the top or bottom and at the same time at the beginning
-	//		or end of the list; then we don't do anything.
-
-	// I guess it makes sense to check for #3 first. If either of the
-	// conditions are present, we just return.
-	//	if( current list item == 0 (top) || current list item == list.size()-1 (bottom)){
-	//		return;
-	//	}
-
-
-
-	// Let's start by scanning the whole list
-	for(unsigned long i = 0; i < vl_sessionList.size(); i++){
-
-		// If item is visible, print it
-		if(vl_sessionList[i].b_visible){
-
+	// First case is _key == 0; indicating this is the initial print of
+	// the list. All items will be visible, we just need to print them, and
+	// update the tracking variables.
+	if(_key == 0){
+		row = d_bound.i_list_start_row;
+		for(unsigned long i = 0; i < vl_sessionList.size(); i++){
+			// If item is visible, print it
+			if(vl_sessionList[i].b_visible){
+				printSession(row++, i, d_colors.str_default_color);
+			}
+			if(row >= d_bound.i_list_end_row)
+				break;
 		}
+		// Highlight the first line in the list
+		printSession(d_bound.i_list_start_row, 0, d_colors.str_list_highlighted_color);
+		updateListTracking(0, 0);
 
-	}
+		return;
+	} // if(_key == 0)
+
+
+
+	// Next case is if the user has pressed UP_ARROW
+	else if(_key == UP_ARROW){
+		return;
+	} // else if(_key == UP_ARROW)
+
+
+
+	// Third case is if the user has pressed DOWN_ARROW
+	else if(_key == DOWN_ARROW){
+		return;
+	} // else if(_key == DOWN_ARROW)
 }

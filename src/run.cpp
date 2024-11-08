@@ -38,6 +38,7 @@ int ivsSessions::run(void)
 	l_track.ul_current_topmost_session		= 0;
 
 	// Print session list to terminal
+	//std::cout << d_colors.str_default_color << vl_sessionList[0].str_sessionCode << std::flush;
 	redrawSessions(0);
 
 	// Set keyboard input in raw mode
@@ -62,7 +63,7 @@ int ivsSessions::run(void)
 
 	// Reset color and print a new line before exiting
 	resetColor();
-	std::cout << "Thank you for using ivsSessions v1\r\n" << std::flush;
+	std::cout << "\r\nThank you for using ivsSessions v1\r\n" << std::flush;
 
 	return(0);
 }
