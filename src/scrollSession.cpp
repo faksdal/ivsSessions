@@ -6,15 +6,6 @@
  */
 
 #include "ivsSessions.h"
-	/*
-	enum ScrollState {	TOP,
-						BOTTOM,
-						MOVE_UP,
-						MOVE_DOWN,
-						SCROLL_UP,
-						SCROLL_DOWN
-	};
-	*/
 ////////////////////////////////////////////////////////////////////////////////
 //
 //
@@ -25,6 +16,11 @@ void ivsSessions::scrollSession(int _key)
 	ScrollState	scrollState;
 
 	switch(scrollState = getScrollState(_key)){
-		case ScrollState::TOP:		break;
+		case ScrollState::TOP:				break;
+		case ScrollState::BOTTOM:			break;
+		case ScrollState::MOVE_UP:			break;
+		case ScrollState::MOVE_DOWN:		break;
+		case ScrollState::SCROLL_UP:		break;
+		case ScrollState::SCROLL_DOWN:		break;
 	} // switch(scrollState = getScrollState(_key))
 }

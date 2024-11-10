@@ -180,14 +180,14 @@ private:
 			i_list_end_row;
 
 		int	i_current_highlighted_row;
-	};
+	}; // class displayBoundaries
 
 	class listTracking{
 	public:
 		unsigned long	ul_current_highlighted_session,
 						ul_current_topmost_session,
 						ul_current_highlighted_row;
-	};
+	}; // class listTracking
 
 	// Color defs for terminal output, restricted to highlight and regular,
 	class displayColors{
@@ -197,13 +197,13 @@ private:
 		std::string	str_filter_passive_color;
 		std::string	str_filter_active_color;
 		std::string	str_list_highlighted_color;
-	};
+	}; // class displayColors
 
 	// Keeps track of the cursor location
 	class cursorLocation{
 	public:
 		int	i_column, i_row;
-	};
+	}; // class cursorLocation
 
 	enum ScrollState {	TOP,
 						BOTTOM,
@@ -211,16 +211,14 @@ private:
 						MOVE_DOWN,
 						SCROLL_UP,
 						SCROLL_DOWN
-	};
+	}; // enum ScrollState
 
 	displayColors		d_colors;
 	displayBoundaries	d_bound;
 	cursorLocation		c_where;
 	listTracking		l_track;
 
-	//ScrollState	scrollState;
-
-	// Hold terminal properties for restoring upon exit
+	// Holds terminal properties for restoring upon exit
 	struct termios	originalTermios;
 
 	void	print(int _x, int _y, std::string _text);

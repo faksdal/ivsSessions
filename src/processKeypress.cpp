@@ -34,7 +34,8 @@ void ivsSessions::processKeypress(bool& _quit)
 							redrawSessions(UP_ARROW);
 							break;
 
-		case DOWN_ARROW:	redrawSessions(DOWN_ARROW);
+		case DOWN_ARROW:	scrollSession(key);
+							redrawSessions(DOWN_ARROW);
 							break;
 
 		case ESC:			// Yeah, user wants to quit this thing...

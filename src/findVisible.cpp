@@ -21,7 +21,7 @@ bool ivsSessions::findVisible(	unsigned long _startSession,
 
 	switch(_direction){
 		case UP_ARROW:		// We search back in the sessionList looking for
-							// the first visible session
+							// the first, previous visible session
 							for(unsigned long i = _startSession - 1; i >= 0 ; i--){
 
 								// If we find a visible session, we return with
@@ -41,8 +41,18 @@ bool ivsSessions::findVisible(	unsigned long _startSession,
 
 							} // for(unsigned long i = _startSession - 1; i >= 0 ; i--)
 							//break;
-		case DOWN_ARROW:	return false;
-							//break;
+
+		case DOWN_ARROW:	// We search forward in the sessionList looking for
+							// the next visible session
+							for(unsigned long i = _startSession + 1; i < vl_sessionList.size()/* - 1*/; i++){
+								if(vl_sessionList[i].b_visible){
+									_nextSession = i;
+									return true;
+								} // if(vl_sessionList[i].b_visible)
+							} // for(unsigned long i = _startSession + 1; i < vl_sessionList.size()/* - 1*/; i++)
+							_nextSession = _startSession;
+							return false;
+
 		default:			return false;
 	}//switch(_direction)
 }
