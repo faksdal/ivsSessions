@@ -44,6 +44,9 @@ int ivsSessions::run(void)
 	// Set keyboard input in raw mode
 	enableRawmode();
 
+	// Updates the status line near the bottom of screen
+	updateStatusLine();
+
 	// Shift focus to the active filter, and update cursor location
 	setFocusActiveFilter();
 

@@ -25,7 +25,13 @@ void ivsSessions::processKeypress(bool& _quit)
 							nextFilter();
 							break;
 
-		case UP_ARROW:		redrawSessions(UP_ARROW);
+		case UP_ARROW:		// If we're at the top of the sessionList when the
+							// user hits UP_ARROW, we don't do anything.
+							if(l_track.ul_current_highlighted_session == 0)
+								break;
+
+							scrollSession(key);
+							redrawSessions(UP_ARROW);
 							break;
 
 		case DOWN_ARROW:	redrawSessions(DOWN_ARROW);
@@ -80,13 +86,8 @@ void ivsSessions::processKeypress(bool& _quit)
 
 							break;
 	}
-	//print(40, 3, "Current highlighted session: ");
-	//print(70, 3, "   ");
-	//print(70, 3, l_track.ul_current_highlighted_session);
-	//print(75, 3, "Current highlighted row: ");
-	//print(101, 3, "   ");
-	//print(101, 3, l_track.ul_current_highlighted_row);
 
+	updateStatusLine();
 	setFocusActiveFilter();
 
 }

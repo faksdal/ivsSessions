@@ -154,6 +154,11 @@ private:
 
 	unsigned long	nextVisibleSession(unsigned long _startItem);
 	unsigned long	previousVisibleSession(unsigned long _startItem);
+	bool	findVisible(	unsigned long _startSession,
+							unsigned long& _nextSession,
+							int _direction);
+	void	updateStatusLine(void);
+	unsigned long visibleSessions(void);
 //////////////////////////// S E S S I O N L I S T /////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -200,10 +205,20 @@ private:
 		int	i_column, i_row;
 	};
 
+	enum ScrollState {	TOP,
+						BOTTOM,
+						MOVE_UP,
+						MOVE_DOWN,
+						SCROLL_UP,
+						SCROLL_DOWN
+	};
+
 	displayColors		d_colors;
 	displayBoundaries	d_bound;
 	cursorLocation		c_where;
 	listTracking		l_track;
+
+	//ScrollState	scrollState;
 
 	// Hold terminal properties for restoring upon exit
 	struct termios	originalTermios;
@@ -240,6 +255,9 @@ private:
 	void	updateListTracking(	unsigned int _current_highlighted_session,
 								unsigned int _current_topmost_session,
 								unsigned int _current_highlighted_row);
+	void	scrollSessionList(int _direction, int _numberOfLines);
+	void	scrollSession(int _key);
+	ivsSessions::ScrollState	getScrollState(int _key);
 ///////////////////////// T E R M I N A L  O U T P U T /////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 
