@@ -297,6 +297,7 @@ private:
 	void	setFocusActiveFilter(void);
 	void	nextFilter(void);
 	int		getActiveFilterIndex(void);
+	void	applyFilter(void);
 
 	//void	printFilters(void);
 //////////////////////////////// F I L T E R S /////////////////////////////////

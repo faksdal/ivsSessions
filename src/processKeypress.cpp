@@ -30,11 +30,11 @@ void ivsSessions::processKeypress(bool& _quit)
 							if(l_track.ul_current_highlighted_session == 0)
 								break;
 
-							scrollSession(key);
+							//scrollSession(key);
 							redrawSessions(UP_ARROW);
 							break;
 
-		case DOWN_ARROW:	scrollSession(key);
+		case DOWN_ARROW:	//scrollSession(key);
 							redrawSessions(DOWN_ARROW);
 							break;
 
@@ -68,6 +68,9 @@ void ivsSessions::processKeypress(bool& _quit)
 
 							// And we should be goooooood :-)
 							break;
+		//case 'v':			vl_sessionList[l_track.ul_current_highlighted_session].b_visible = false;
+		//					redrawSessions(0);
+		//					break;
 
 		default:			// Advance the cursor location
 							// TODO: Edit this to stay within constraint...
@@ -82,6 +85,7 @@ void ivsSessions::processKeypress(bool& _quit)
 							// I skipped the CAPS
 							//vl_filter[getActiveFilterIndex()].str_filterText.append(1, (char)std::toupper((char)key));
 							vl_filter[getActiveFilterIndex()].str_filterText.append(1, (char)key);
+							applyFilter();
 
 							// Here we need to write some code to apply filter
 
