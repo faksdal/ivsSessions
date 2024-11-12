@@ -66,6 +66,8 @@ void ivsSessions::processKeypress(bool& _quit)
 							// Prints the new filter text back
 							print(vl_filter[getActiveFilterIndex()].i_filterColumn, 3, d_colors.str_filter_passive_color + vl_filter[getActiveFilterIndex()].str_filterText);
 
+							applyFilter();
+
 							// And we should be goooooood :-)
 							break;
 		//case 'v':			vl_sessionList[l_track.ul_current_highlighted_session].b_visible = false;

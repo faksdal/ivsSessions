@@ -17,7 +17,7 @@
 ####################################################################################################
 TARGET = ivs-sessions
 CXX = g++
-CPPFLAGS = -Iinc -I. -g -Wall
+CPPFLAGS = -Iinc -I. -g -Wall 
 
 INCDIR = inc
 SRCDIR = src
