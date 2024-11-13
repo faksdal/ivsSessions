@@ -1,5 +1,21 @@
-#ivsSessions
+# ivsSessions
 
-Reads and lists ivs master files to the terminal, with the option to filter the results
-Not completely done yet, but if you wanna have a crack at it,  be my guest :-)
+Reads and lists ivs master files in the terminal. Not completely done yet, but if you wanna have a crack at it, be my guest.
+
+## Description
+
+You should be able to make it using make in the terminal. You need of course the build tools installed on your system.
+
+It takes one parameter, -i <name of input file>
+The input file would be the master text files from https://ivscc.gsfc.nasa.gov/program/index.html
+
+
+## Authors
+
+jon@jonleithe.no
+
+## Version History
+
+* 1
+    * Initial Release
 
