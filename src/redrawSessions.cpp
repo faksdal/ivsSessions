@@ -16,7 +16,7 @@
 // What do I need to re-draw the session list?
 //
 // What do I want from this function?
-//		* I want to be able to call it from anywhere
+//		* I want to be able to call it from anywhere (within reason of course)
 //		* I want it to draw all visible items to the visible portion of screen
 //		* I want it to stop printing when it either; reaches the bottom of the
 //			screen, or when we are at the last session in the list

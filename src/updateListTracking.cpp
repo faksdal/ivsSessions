@@ -10,12 +10,12 @@
 
 
 ////////////////////////////////////////////////////////////////////////////////
-//	Updates content of:
-//		class listTracking{
-//		public:
-//			unsigned long	ul_current_highlighted_session,
-//							ul_current_topmost_session;
-//		};
+//	class listTracking{
+//	public:
+//		unsigned long	ul_current_highlighted_session,
+//						ul_current_topmost_session,
+//						ul_current_highlighted_row;
+//	}; // class listTracking
 //
 //	listTracking		l_track;
 ////////////////////////////////////////////////////////////////////////////////

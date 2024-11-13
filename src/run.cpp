@@ -64,8 +64,9 @@ int ivsSessions::run(void)
 	restoreTerminalState();
 
 
-	// Reset color and print a new line before exiting
+	// Reset color, print a new line and clear the screen before exiting
 	resetColor();
+	clearScreen();
 	std::cout << "\r\nThank you for using ivsSessions v1\r\n" << std::flush;
 
 	return(0);

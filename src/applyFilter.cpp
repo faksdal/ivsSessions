@@ -57,6 +57,6 @@ void ivsSessions::applyFilter(void)
 			break;
 	} // for(unsigned long i = 0; i < vl_sessionList.size(); i++)
 
-	//printSession(d_bound.i_list_start_row, 0, d_colors.str_list_highlighted_color);
-	//updateListTracking(0, 0, d_bound.i_list_start_row);
+	printSession(d_bound.i_list_start_row, getFirstVisibleIndex(), d_colors.str_list_highlighted_color);
+	updateListTracking(getFirstVisibleIndex(), getFirstVisibleIndex(), d_bound.i_list_start_row);
 }
