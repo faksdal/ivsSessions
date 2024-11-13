@@ -1,0 +1,249 @@
+## Master file format version 2.0           2022.11.01 CAD&CCT
+
+                         2024 MULTI-AGENCY SCHEDULE
+
+                     Last Updated - November 08, 2024 - CCT
+
+   SESSION      DATE     SESSION    DOY TIME   DUR                         STATIONS                        SKED CORR  STATUS  DBC  SUBM DEL
+     TYPE     yyyymmdd     CODE     ddd hh:mm  h:mm                                                                  yyyymmdd CODE      days
+--------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R1      |20240102|r11136      |  2|17:00|24:00|AgOnHtKkMaNsKvWz                                      |NASA|BONN|20240112|    |NASA|   9|
+|VGOS-OPS    |20240103|vo4003      |  3|12:00|24:00|GsK2MgOeOwWfWsSa -NnYj                                |NASA|VIEN|20240228|    |NASA|  55|
+|IVS-R4      |20240104|r41136      |  4|18:30|24:00|KkNsFtHtKeMcWz -NnHb                                  |USNO|WASH|20240122|    |USNO|  17|
+|USNO-CRF    |20240105|ug005a      |  5|07:44|24:00|Va                                                    |USNO|VLBA|20240205|    |USNO|  30|
+|IVS-R1      |20240108|r11137      |  8|17:00|24:00|HbIsAgOnHtKkMaNsKvWzWw -KeNn                          |NASA|BONN|20240125|    |NASA|  16|
+|IVS-T2      |20240109|t2165       |  9|17:30|24:00|26HtNsOnKvWzFtSy -Kg                                  |DACH|BONN|20240411|    |BKG |  92|
+|IVS-RD      |20240110|rd2401      | 10|18:00|24:00|FtHhKkMcNsOnWzKm -T6Ur                                |OSO |WASH|20240229|    |NASA|  49|
+|IVS-R4      |20240111|r41137      | 11|18:30|24:00|KkNsFtHtMaWwWz -NnHbKe                                |USNO|WASH|20240125|    |USNO|  13|
+|USNO-CRF    |20240114|ug005b      | 14|16:48|24:00|Va                                                    |USNO|VLBA|20240430|    |USNO| 106|
+|IVS-R1      |20240115|r11138      | 15|17:00|24:00|HbIsFtHtKkMaNsKvWzWw -NnKe                            |NASA|BONN|20240128|    |NASA|  12|
+|VGOS-OPS    |20240117|vo4017      | 17|12:00|24:00|GsHbIsK2MgOeOwWfWsYjSa -Nn                            |NASA|WASH|20240223|    |NASA|  36|
+|IVS-R4      |20240118|r41138      | 18|18:30|24:00|KkNsBdZcSvFtHtWwWz -NnKeHb                            |USNO|WASH|20240202|    |USNO|  14|
+|IVS-R1      |20240122|r11139      | 22|17:00|24:00|HbIsAgOnHtKkNsKvWzWw -NnKe                            |NASA|BONN|20240130|    |NASA|   7|
+|VGOS-24INT-S|20240122|s22417      | 22|17:00|24:00|MgWs                                                  |DACH|WETZ|Wt_med  |    |NASA| 290|
+|IVS-CRF     |20240123|crf140      | 23|17:30|24:00|HhHoYs -Ur                                            |DACH|SHAO|20240507|    |USNO| 104|
+|VGOS-OPS    |20240124|vo4024      | 24|12:00|24:00|GsHbIsK2MgOeOwWfWsYjSa -Nn                            |NASA|BONN|20240215|    |NASA|  21|
+|AOV         |20240125|aov091      | 25|12:30|24:00|HbIsKm -KeYgUr                                        |SHAO|SHAO|20240523|    |NASA| 118|
+|IVS-R4      |20240125|r41139      | 25|18:30|24:00|KkNsBdZcFtHtMcWwWzUr -NnSv                            |USNO|WASH|20240206|    |USNO|  11|
+|IVS-R1      |20240129|r11140      | 29|17:00|24:00|HbIsAgOnFtHtMcNsKvWz -NnKe                            |NASA|BONN|20240207|    |NASA|   8|
+|AUSTRAL     |20240130|aua108      | 30|17:30|24:00|HtHbHoWw -KeYg                                        |DACH|UTAS|20240305|    |NASA|  34|
+|IVS-RD      |20240131|rd2402      | 31|18:00|24:00|FtHhKkMaNsOnWz                                        |OSO |WASH|Ready   |    |NASA| 281|
+--------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R4      |20240201|r41140      | 32|18:30|24:00|KkNsBdZcSvHtNtFtWz -UrHbNnKe                          |USNO|WASH|20240216|    |USNO|  14|
+|AOV         |20240204|aov092      | 35|12:00|24:00|IsKmSyUr -HbKeWwYg                                    |GSI |GSI |20240701|    |NASA| 147|
+|IVS-R1      |20240205|r11141      | 36|17:00|24:00|HbIsAgBdHtNsSvZcKvWz -NnKe                            |NASA|BONN|20240219|    |NASA|  13|
+|VGOS-RD     |20240207|vr2401      | 38|12:00|24:00|GsK2MgOeOwWfYjSa -UmS6KeHbIsWsNn                      |DACH|HAYS|20240402|    |NASA|  54|
+|IVS-R4      |20240208|r41141      | 39|18:30|24:00|KkNsBdZcSvHtHbWz -NnKeWw                              |USNO|WASH|20240221|    |USNO|  12|
+|IVS-R1      |20240212|r11142      | 43|17:00|24:00|HbIsOnHtKkNsWz -KeWwNn                                |NASA|BONN|20240220|    |NASA|   7|
+|IVS-CRF     |20240213|crf141      | 44|17:30|24:00|HtMaNtYs                                              |DACH|SHAO|20240517|    |USNO|  93|
+|VGOS-OPS    |20240214|vo4045      | 45|12:00|24:00|GsHbIsK2MgOeOwWfWsYjSa -NnS6Um                        |NASA|SHAO|20240422|    |NASA|  67|
+|IVS-RDV     |20240214|rv163       | 45|18:00|24:00|VaHtNsOnWz -Ho                                        |USNO|VLBA|20240327|    |USNO|  41|
+|IVS-R4      |20240215|r41142      | 46|18:30|24:00|KkNsBdZcSvHtHbNtFtWzKe -WwNn                          |USNO|WASH|20240301|    |USNO|  14|
+|IVS-R1      |20240219|r11143      | 50|17:00|24:00|HbKeIsAgOnFtHtMcNsKvWz -Nn                            |NASA|BONN|20240308|    |NASA|  17|
+|VGOS-24INT-S|20240219|s22418      | 50|17:00|24:00|MgWs                                                  |DACH|WETZ|Wt_med  |    |NASA| 262|
+|IVS-T2P     |20240220|t2p166      | 51|17:30|24:00|AgEbFtHtHhHoKkMaMcNtNsOnKvWzYs -KgVm                  |DACH|BONN|20240305|    |BKG |  13|
+|AUSTRAL     |20240221|aua109      | 52|18:00|24:00|HtHbHoKeWwYg                                          |DACH|UTAS|20240312|    |NASA|  19|
+|IVS-R4      |20240222|r41143      | 53|18:30|24:00|KkFtHtHbKeMaWwWz -NnNs                                |USNO|WASH|20240308|    |USNO|  14|
+|IVS-R1      |20240226|r11144      | 57|17:00|24:00|HbKeIsFtHtKkMaNsKvWzWw -Nn                            |NASA|BONN|20240319|    |NASA|  21|
+|VGOS-OPS    |20240228|vo4059      | 59|12:00|24:00|GsHbIsK2MgOeOwWfWsYjSa -Nn                            |NASA|BONN|20240321|    |NASA|  21|
+|IVS-R4      |20240229|r41144      | 60|18:30|24:00|KkNsHtHbKeMaWwWz -NnFt                                |USNO|WASH|20240315|    |USNO|  14|
+--------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R1      |20240304|r11145      | 64|17:00|24:00|HbKeHtKkMaNsKvWzAgWw -NnFt                            |NASA|BONN|20240319|    |NASA|  14|
+|IVS-OHIG    |20240305|ohg147      | 65|17:30|24:00|AgHtHoKkSyWw -OhFt                                    |DACH|BONN|Wt_med  |    |BKG | 247|
+|VGOS-OPS    |20240306|vo4066      | 66|12:00|24:00|GsIsK2MgOeOwWfWsYj -NnSa                              |DACH|HAYS|20240429|    |NASA|  53|
+|IVS-R4      |20240307|r41145      | 67|18:30|24:00|KkNsHtMaWwWzHbKe -NnFt                                |USNO|WASH|20240321|    |USNO|  13|
+|AUSTRAL     |20240308|aua110      | 68|19:00|24:00|HtHbKeWwYg -Ho                                        |DACH|UTAS|20240515|    |NASA|  67|
+|IVS-R1      |20240311|r11146      | 71|17:00|24:00|HbKeIsKkMaNsKvWzAg -WwNnFt                            |NASA|BONN|20240327|    |NASA|  15|
+|IVS-R4      |20240314|r41146      | 74|18:30|24:00|KkNsHbKeMaWz -NnWwFt                                  |USNO|WASH|20240329|    |USNO|  14|
+|IVS-R1      |20240318|r11147      | 78|17:00|24:00|HbKeIsHtKkMaNsKvWzAg -NnYg                            |NASA|BONN|20240403|    |NASA|  15|
+|VGOS-24INT-S|20240318|s22419      | 78|17:00|24:00|Ws -Mg                                                |DACH|WETZ|Cancel  |    |NASA| 234|
+|VGOS-OPS    |20240320|vo4080      | 80|12:00|24:00|HbIsK2MgOeOwWfWsYjSa -NnGs                            |NASA|VIEN|20240513|    |NASA|  53|
+|IVS-R4      |20240321|r41147      | 81|18:30|24:00|KkNsHbMaWzYgKe -NnFtWw                                |USNO|WASH|20240405|    |USNO|  14|
+|IVS-CRF     |20240325|crf142      | 85|14:00|24:00|HhYs -HoUr                                            |DACH|SHAO|20240522|    |USNO|  57|
+|IVS-R1      |20240325|r11148      | 85|17:00|24:00|HbKeOnHtMaNsWzAgYg -NnIsKv                            |NASA|BONN|20240408|    |NASA|  13|
+|IVS-RDV     |20240326|rv164       | 86|17:30|24:00|VaHhHoOnWz                                            |USNO|VLBA|20240605|    |USNO|  70|
+|VGOS-OPS    |20240327|vo4087      | 87|12:00|24:00|OeHbK2MgOwWfWsSaNn -GsIsYj                            |NASA|BONN|20240426|    |NASA|  29|
+|IVS-R4      |20240327|r41148      | 87|18:30|24:00|KkBdZcHtKeMaWzYg -Nt                                  |USNO|WASH|20240412|    |USNO|  15|
+--------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R1      |20240402|r11149      | 93|17:00|24:00|KeOnFtHtMcNsKvWzKkYg                                  |NASA|BONN|20240417|    |NASA|  14|
+|VGOS-OPS    |20240403|vo4094      | 94|12:00|24:00|HbIsK2MgNnOeOwWfWsYjSa -Gs                            |NASA|WASH|20240515|    |NASA|  41|
+|IVS-RD      |20240403|rd2403      | 94|17:30|24:00|FtHhKkMaNsOnWz                                        |OSO |SHAO|20240524|    |NASA|  50|
+|IVS-R4      |20240404|r41149      | 95|18:30|24:00|KkNsBdZcFtHtKeHbMaWzYg                                |USNO|WASH|20240418|    |USNO|  13|
+|USNO-CRF    |20240406|ug005c      | 97|00:47|24:00|Va                                                    |USNO|VLBA|20240430|    |USNO|  23|
+|IVS-R1      |20240408|r11150      | 99|17:00|24:00|HbKeIsMaNnNsKvHtSvWzYgFt -Ww                          |NASA|BONN|20240425|    |NASA|  16|
+|IVS-OHIG    |20240410|ohg148      |101|18:00|24:00|AgFtHtHoKkOhSy -Ww                                    |DACH|BONN|Wt_med  |    |BKG | 211|
+|IVS-R4      |20240411|r41150      |102|18:30|24:00|KkBdZcFtHtHbKeWzYg -WwNsNn                            |USNO|WASH|20240429|    |USNO|  17|
+|IVS-R1      |20240415|r11151      |106|17:00|24:00|HbKeIsAgOnHtKkMaNnNsKvWzYg -Ww                        |NASA|BONN|20240501|    |NASA|  15|
+|VGOS-24INT-S|20240415|s22420      |106|17:00|24:00|MgWs                                                  |DACH|WETZ|Wt_med  |    |NASA| 206|
+|IVS-T2      |20240416|t2167       |107|17:30|24:00|2656HtNsOhOnKvWzFtYs -36Kg                            |DACH|BONN|Wt_med  |    |BKG | 205|
+|VGOS-OPS    |20240417|vo4108      |108|12:00|24:00|HbIsK2MgNnOeOwWfWsSa -YjKeGsWn                        |NASA|WETZ|20240927|    |NASA| 162|
+|IVS-R4      |20240418|r41151      |109|18:30|24:00|KkNsBdFtHtHbNtNnWzYg -ZcKeWw                          |USNO|WASH|20240502|    |USNO|  13|
+|AUSTRAL     |20240419|aua111      |110|19:00|24:00|HtHbHoKeYg -Ww                                        |DACH|UTAS|20240530|    |NASA|  40|
+|IVS-R1      |20240422|r11152      |113|17:00|24:00|IsAgBdFtHtNtNnNsSvZcHbKeYg -Ww                        |NASA|BONN|20240513|    |NASA|  20|
+|VGOS-OPS    |20240424|vo4115      |115|12:00|24:00|HbIsK2MgNnOeOwWfWsYjSa -Gs                            |NASA|BONN|20240525|    |NASA|  30|
+|IVS-RDV     |20240424|rv165       |115|18:00|24:00|VaHtHoNsOnWzKk                                        |USNO|VLBA|20240705|    |USNO|  71|
+|IVS-R4      |20240425|r41152      |116|18:30|24:00|KkNsBdZcSvFtHtHbKeNnWzYg                              |USNO|WASH|20240515|    |USNO|  19|
+|USNO-CRF    |20240425|ug005d      |116|21:11|24:00|Va                                                    |USNO|VLBA|20240610|    |USNO|  45|
+|TRF-TIE     |20240426|trf241      |117|19:00|24:00|56FtHtWwHoKkMaWz2636                                  |DACH|BONN|20240704|    |BKG |  68|
+|IVS-R1      |20240429|r11153      |120|17:00|24:00|HbKeIsAgBdFtHtNtNnNsZcKvWzYg -Ww                      |NASA|BONN|20240516|    |NASA|  16|
+--------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-CRF-DS  |20240502|crd129      |123|12:00|24:00|AgHhHoOhWw                                            |DACH|WASH|Wt_med  |    |USNO| 189|
+|IVS-R4      |20240502|r41153      |123|18:30|24:00|KkNsHtHbKeMaWzNnYg -FtUr                              |USNO|WASH|20240517|    |USNO|  14|
+|IVS-R1      |20240506|r11154      |127|17:00|24:00|HbKeAgOnFtHtMcNnNsWzNtYg                              |NASA|BONN|20240522|    |NASA|  15|
+|VGOS-OPS    |20240508|vo4129      |129|12:00|24:00|HbK2MgWfSa -YjGs                                      |NASA|SHAO|20240614|    |NASA|  36|
+|IVS-R4      |20240509|r41154      |130|18:30|24:00|KkFtHtHbKeMaNtYg -WwUr                                |USNO|WASH|20240524|    |USNO|  14|
+|USNO-CRF    |20240512|ug005e      |133|19:19|24:00|Va                                                    |USNO|VLBA|20240613|    |USNO|  31|
+|IVS-R1      |20240513|r11155      |134|17:00|24:00|IsAgBdFtHtKkNnNsSvZcHbKeYgWzKv                        |NASA|BONN|20240527|    |NASA|  13|
+|VGOS-24INT-S|20240513|s22421      |134|17:00|24:00|MgWs                                                  |DACH|WETZ|Wt_med  |    |NASA| 178|
+|IVS-R4      |20240516|r41155      |137|18:30|24:00|KkBdZcSvHtHbKeMaYgWz -FtWw                            |USNO|WASH|20240530|    |USNO|  13|
+|AUSTRAL     |20240517|aua112      |138|19:00|24:00|HtKeYg -HbWw                                          |DACH|UTAS|20240613|    |NASA|  26|
+|USNO-CRF    |20240518|ug005f      |139|20:06|24:00|Va                                                    |USNO|VLBA|20240617|    |USNO|  29|
+|IVS-CRF     |20240520|crf143      |141|14:00|24:00|HhHoUr -Ys                                            |DACH|SHAO|Wt_med  |    |USNO| 171|
+|IVS-R1      |20240520|r11156      |141|17:00|24:00|HbKeIsAgBdFtHtNtSvZcKvYg                              |NASA|BONN|20240531|    |NASA|  10|
+|IVS-RD      |20240521|rd2404      |142|17:30|24:00|FtHhKkMaNsOnWz -T6                                    |OSO |SHAO|20240624|    |NASA|  33|
+|VGOS-OPS    |20240522|vo4143      |143|12:00|24:00|HbIsK2MgNnOeOwWfSaKeWs -Wn                            |NASA|HAYS|20240621|    |NASA|  29|
+|IVS-R4      |20240523|r41156      |144|18:30|24:00|KkNsFtHtHbKeMaWzNnYg -Ww                              |USNO|WASH|20240606|    |USNO|  13|
+|IVS-R1      |20240527|r11157      |148|17:00|24:00|HbKeIsHtMaNnNsKvWzYg -Ww                              |NASA|BONN|20240610|    |NASA|  13|
+|VGOS-OPS    |20240529|vo4150      |150|12:00|24:00|HbIsK2MgNnOeOwWf -GsYjSa                              |NASA|WASH|20240701|    |NASA|  32|
+|IVS-R4      |20240530|r41157      |151|18:30|24:00|KkNsHtHbKeMaNnYg -Ww                                  |USNO|WASH|20240612|    |USNO|  12|
+--------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R1      |20240603|r11158      |155|17:00|24:00|HbKeIsHtKkMaNnNsKvWzYg -Ft                            |NASA|BONN|20240618|    |NASA|  14|
+|IVS-OHIG    |20240604|ohg149      |156|17:30|24:00|AgFtHtHoKkOhSyWw                                      |DACH|BONN|Wt_med  |    |BKG | 156|
+|VGOS-OPS    |20240605|vo4157      |157|12:00|24:00|HbIsK2MgNnWfWs -GsYjSa                                |NASA|VIEN|20240711|    |NASA|  35|
+|IVS-R4      |20240606|r41158      |158|18:30|24:00|KkNsFtHtHbKeMaWzNnYg -Ww                              |USNO|WASH|20240625|    |USNO|  18|
+|IVS-R1      |20240610|r11159      |162|17:00|24:00|HbKeIsFtHtKkMaNnNsKvWzYg -Ww                          |NASA|BONN|20240621|    |NASA|  10|
+|VGOS-24INT-S|20240610|s22422      |162|17:00|24:00|MgWs                                                  |DACH|WETZ|Wt_med  |    |NASA| 150|
+|USNO-CRF    |20240611|ug005g      |163|02:41|24:00|Va                                                    |USNO|VLBA|20240726|    |USNO|  44|
+|VGOS-RD     |20240612|vr2402      |164|12:00|24:00|NnOeOwWfWs -YjSa                                      |DACH|HAYS|20240826|    |NASA|  74|
+|IVS-R4      |20240613|r41159      |165|18:30|24:00|KkHtKeMaWzNnYg -NsFtHbWw                              |USNO|WASH|20240626|    |USNO|  12|
+|AUSTRAL     |20240614|aua113      |166|19:00|24:00|HtHbKeYg -Ww                                          |DACH|UTAS|20240714|    |NASA|  29|
+|IVS-R1      |20240617|r11160      |169|17:00|24:00|IsBdMaNnNsSvZcWzHbKeYg -FtWwSh                        |NASA|WASH|20240703|    |NASA|  15|
+|IVS-R4      |20240620|r41160      |172|18:30|24:00|KkNsBdZcFtHtHbKeWzNnYg -Ww                            |USNO|WASH|20240708|    |USNO|  17|
+|IVS-R1      |20240624|r11161      |176|17:00|24:00|HbKeIsAgOnHtKkMaNnNsKvWzYg                            |NASA|BONN|20240709|    |NASA|  14|
+|USNO-CRF    |20240624|ug005h      |176|20:59|24:00|Va                                                    |USNO|VLBA|20240726|    |USNO|  31|
+|IVS-T2      |20240625|t2168       |177|17:30|24:00|HtNsOhOnWz -KvKg263656                                |DACH|BONN|Wt_med  |    |BKG | 135|
+|VGOS-OPS    |20240626|vo4178      |178|12:00|24:00|GsHbIsK2MgNnOeWfWs -OwYjSa                            |NASA|BONN|20240717|    |NASA|  20|
+|IVS-RD      |20240626|rd2405      |178|18:00|24:00|HhKkMcNsOnWz                                          |OSO |WASH|20240716|    |NASA|  19|
+|IVS-R4      |20240627|r41161      |179|18:30|24:00|KkNsBdZcHtHbKeMcNnYgWz -UrSv                          |USNO|WASH|20240710|    |USNO|  12|
+--------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R1      |20240701|r11162      |183|17:00|24:00|HbKeIsAgOnHtKkNnWzYg -KvShNs                          |NASA|BONN|20240712|    |NASA|  10|
+|TRF-TIE     |20240702|kt010       |184|19:30|21:00|K2Kk                                                  |NASA|WETZ|Ready   |    |NASA| 128|
+|IVS-CRF-DS  |20240703|crd130      |185|12:00|24:00|AgHhHoOh -Ww                                          |DACH|WASH|Wt_med  |    |USNO| 127|
+|IVS-R4      |20240704|r41162      |186|18:30|24:00|FtHtHbKeMaNnYgWz -UrNsWw                              |USNO|BONN|20240717|    |USNO|  12|
+|AOV         |20240705|aov093      |187|19:00|24:00|HbIsKeKmYgKv -UrWwVmShKg                              |UTAS|UTAS|20241031|    |NASA| 117|
+|USNO-CRF    |20240706|ug005i      |188|12:52|24:00|Va                                                    |USNO|VLBA|20240726|    |USNO|  19|
+|IVS-R1      |20240708|r11163      |190|17:00|24:00|HbKeIsOnFtHtMcNnKvWzYg -WwNs                          |NASA|BONN|20240723|    |NASA|  14|
+|TRF-TIE     |20240708|kt011       |190|19:30|21:00|K2Kk                                                  |NASA|WETZ|Ready   |    |NASA| 122|
+|IVS-RD      |20240709|rd2406      |191|17:30|24:00|FtHhKkMcNsOnWzKm                                      |OSO |SHAO|20240912|    |NASA|  64|
+|VGOS-OPS    |20240710|vo4192      |192|12:00|24:00|GsHbIsK2MgNnOeWsKe -WfOwYjSa                          |NASA|WASH|20240808|    |NASA|  28|
+|IVS-RDV     |20240710|rv166       |192|18:00|24:00|VaHhNsOnWz -HoSh                                      |USNO|VLBA|Ready   |    |USNO| 120|
+|IVS-R4      |20240711|r41163      |193|18:30|24:00|KkFtHtHbKeMaWzNnYg -NsWw                              |USNO|BONN|20240726|    |USNO|  14|
+|AUSTRAL     |20240712|aua114      |194|19:00|24:00|HtHbKeYg -Ww                                          |DACH|UTAS|20240807|    |NASA|  25|
+|IVS-R1      |20240715|r11164      |197|17:00|24:00|WzIsBdFtHtNtNnZcHbKeYg -AgSvNs                        |NASA|WASH|20240729|    |NASA|  13|
+|VGOS-24INT-S|20240715|s22423      |197|17:00|24:00|MgWs                                                  |DACH|WETZ|Wt_med  |    |NASA| 115|
+|TRF-TIE     |20240715|kt012       |197|19:30|21:00|K2Kk                                                  |NASA|WETZ|Ready   |    |NASA| 115|
+|IVS-CRF     |20240716|crf144      |198|17:30|24:00|HhMaNtYsKm                                            |DACH|SHAO|20240923|    |USNO|  68|
+|VGOS-OPS    |20240717|vo4199      |199|12:00|24:00|GsHbK2MgNnWsOe -WfKeIsSaYjOw                          |NASA|VIEN|20240905|    |NASA|  49|
+|IVS-R4      |20240718|r41164      |200|18:30|24:00|KkBdZcFtHtHbKeMcNnYgWzNs -SvWw                        |USNO|WASH|20240801|    |USNO|  13|
+|IVS-R1      |20240722|r11165      |204|17:00|24:00|HbKeIsBdHtNtNnZcYgWz -KvFtAgSvNs                      |NASA|WASH|20240805|    |NASA|  13|
+|IVS-R4      |20240725|r41165      |207|18:30|24:00|KkBdZcHtHbNtNnYgWzNs -FtKeWwSv                        |USNO|WASH|20240808|    |USNO|  13|
+|IVS-R1      |20240729|r11166      |211|17:00|24:00|HbKeFtKkMaHtNnWzYgNs -KvIsSh                          |NASA|BONN|20240814|    |NASA|  15|
+|VGOS-OPS    |20240731|vo4213      |213|12:00|24:00|HbIsK2MgNnWfWsKeOe -GsSaYjOw                          |NASA|BONN|20240826|    |NASA|  25|
+--------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R4      |20240801|r41166      |214|18:30|24:00|KkNnBdZcFtHtHbKeMcYgWzNs -Sv                          |USNO|WASH|20240816|    |USNO|  14|
+|IVS-R1      |20240805|r11167      |218|17:00|24:00|HbFtHtKkMaNnWzNt -YgIsKeAgSh                          |NASA|BONN|20240822|    |NASA|  16|
+|IVS-CRF-DS  |20240807|crd131      |220|12:00|24:00|HhHoOh -AgWw                                          |DACH|WASH|Wt_med  |    |USNO|  92|
+|VGOS-OPS    |20240807|vo4220      |220|12:00|24:00|HbIsK2MgNnWfWsOeSa -WnGsKeYjOw                        |NASA|HAYS|20240909|    |NASA|  32|
+|IVS-R4      |20240808|r41167      |221|18:30|24:00|KkNnBdZcFtHbNtMaYgWz -KeWw                            |USNO|WASH|20240822|    |USNO|  13|
+|IVS-R1      |20240812|r11168      |225|17:00|24:00|HbKeIsOnHtKkMaWzFtNnYg -AgSh                          |NASA|BONN|20240825|    |NASA|  12|
+|VGOS-24INT-S|20240812|s22424      |225|17:00|24:00|MgWs                                                  |DACH|WETZ|Wt_med  |    |NASA|  87|
+|IVS-RD      |20240813|rd2407      |226|17:30|24:00|FtHhKkMcOnWzKm -Ns                                    |OSO |SHAO|20241007|    |NASA|  54|
+|IVS-R4      |20240815|r41168      |228|18:30|24:00|KkBdZcHtHbFtYg -NnKeSvWw                              |USNO|WASH|20240830|    |USNO|  14|
+|AUSTRAL     |20240816|aua115      |229|19:00|24:00|HtHbKeYg -Ww                                          |DACH|UTAS|20240903|    |NASA|  17|
+|VGOS-24INT-B|20240817|bx4230      |230|00:00|24:00|OeIs                                                  |DACH|GSI |Wt_med  |    |NASA|  82|
+|VGOS-24INT-C|20240818|cx4231      |231|00:00|24:00|OeIs                                                  |DACH|GSI |Wt_med  |    |NASA|  81|
+|IVS-R1      |20240819|r11169      |232|17:00|24:00|HbKeIsFtKkWzOnYg -WwNsSh                              |NASA|BONN|20240901|    |NASA|  12|
+|VGOS-OPS    |20240821|vo4234      |234|12:00|24:00|HbIsK2MgOeWsKeUmS6 -WfSaGsYjOw                        |NASA|SHAO|20240923|    |NASA|  32|
+|IVS-RDV     |20240821|rv167       |234|18:00|24:00|VaHhHoOnWz -NsSh                                      |USNO|VLBA|In_prog |    |USNO|  78|
+|IVS-R4      |20240822|r41169      |235|18:30|24:00|KkFtHbKeMaWzNtYg -WwNs                                |USNO|BONN|20240905|    |USNO|  13|
+|IVS-R1      |20240826|r11170      |239|17:00|24:00|HbKeIsOnHtMaKvWzYg -NsSh                              |NASA|BONN|20240910|    |NASA|  14|
+|IVS-T2      |20240827|t2169       |240|17:30|24:00|HtOhOnKvWzFtYs -263656NsKg                            |DACH|BONN|Wt_med  |    |BKG |  72|
+|VGOS-RD     |20240828|vr2403      |241|12:00|24:00|HbIsK2MgOeOwWfWsKe -GsYjSa                            |DACH|HAYS|Wt_med  |    |NASA|  71|
+|IVS-OHIG    |20240828|ohg150      |241|18:00|24:00|FtHtKkOhSy -AgWw                                      |DACH|BONN|Wt_med  |    |BKG |  71|
+|AOV         |20240829|aov094      |242|12:30|24:00|HbIsKeKmKvUrYgUcUd -VmShKg                            |GSI |GSI |Wt_med  |    |NASA|  70|
+|IVS-R4      |20240829|r41170      |242|18:30|24:00|KkBdZcFtHtNtWz -Ns                                    |USNO|WASH|20240911|    |USNO|  12|
+--------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R1      |20240902|r11171      |246|17:00|24:00|HbKeOnFtHtNnKvWzYg -NtAgIsNs                          |NASA|BONN|20240917|    |NASA|  14|
+|APSG        |20240903|apsg54      |247|17:30|24:00|HoKkKvUrKm -ShKg                                      |SHAO|SHAO|Wt_med  |    |NASA|  65|
+|VGOS-OPS    |20240904|vo4248      |248|12:00|24:00|HbIsK2MgNnOeOwWfWsKe -GsYjSa                          |NASA|BONN|20241001|    |NASA|  26|
+|IVS-R4      |20240905|r41171      |249|18:30|24:00|KkBdZcFtHtHbKeNnYgWz -NtSvWwNs                        |USNO|WASH|20240920|    |USNO|  14|
+|IVS-R1      |20240909|r11172      |253|17:00|24:00|HbKeIsOnHtKkNnKvWzYg -AgNsSh                          |NASA|BONN|20240922|    |NASA|  12|
+|TRF-TIE     |20240910|kt013       |254|19:30|21:00|K2Kk                                                  |NASA|WETZ|Wt_med  |    |NASA|  58|
+|IVS-R4      |20240912|r41172      |256|18:30|24:00|KkBdZcHtHbKeNnYgWzSv -NtWwNs                          |USNO|WASH|20240927|    |USNO|  14|
+|AUSTRAL     |20240913|aua116      |257|19:00|24:00|HtHbKeYg -Ww                                          |DACH|UTAS|20241003|    |NASA|  19|
+|IVS-R1      |20240916|r11173      |260|17:00|24:00|HbKeIsOnHtKkMaNnYg -AgWzWwNs                          |NASA|BONN|20240930|    |NASA|  13|
+|VGOS-24INT-S|20240916|s22425      |260|17:00|24:00|MgWs                                                  |DACH|WETZ|Wt_med  |    |NASA|  52|
+|VGOS-OPS    |20240918|vo4262      |262|12:00|24:00|IsK2MgNnOeOwWsKe -WfHbGsYjSa                          |NASA|WASH|20241018|    |NASA|  29|
+|IVS-R4      |20240919|r41173      |263|18:30|24:00|KkBdZcFtHtHbMaNnYgKe -WzWwNs                          |USNO|WASH|20241003|    |USNO|  13|
+|IVS-R1      |20240923|r11174      |267|17:00|24:00|IsOnFtNnHbKeYg -AgNtWzNsSh                            |NASA|BONN|20241009|    |NASA|  15|
+|VGOS-OPS    |20240925|vo4269      |269|12:00|24:00|HbIsK2MgNnOeOwWfWsKeWn -GsYjSa                        |NASA|BONN|20241024|    |NASA|  28|
+|IVS-RD      |20240925|rd2408      |269|18:00|24:00|FtHhKkOnT6Km -NtWzNs                                  |OSO |SHAO|Wt_med  |    |NASA|  43|
+|IVS-R4      |20240926|r41174      |270|18:30|24:00|BdZcSvFtHtHbKeNnYg -KkWzMcWwNs                        |USNO|WASH|20241018|    |USNO|  21|
+|AOV         |20240927|aov095      |271|19:00|24:00|HbIsKeKmUrVmYgKv -WwShKg                              |SHAO|SHAO|Wt_med  |    |NASA|  41|
+|IVS-CRF-DS  |20240930|crd132      |274|12:00|24:00|AgHhHoOh -Ww                                          |DACH|WASH|Wt_med  |    |USNO|  38|
+|IVS-R1      |20240930|r11175      |274|17:00|24:00|HbKeOnHtMaNnWzYgKv -KkNs                              |NASA|BONN|20241015|    |NASA|  14|
+--------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-T2      |20241001|t2170       |275|17:30|24:00|263656HtOhOnKvWzFtSy -NsKg                            |DACH|BONN|Wt_med  |    |BKG |  37|
+|IVS-R4      |20241003|r41175      |277|18:30|24:00|KkBdZcSvHtNnFtHbKeWz -YgNtWwNs                        |USNO|WASH|20241017|    |USNO|  13|
+|IVS-R1      |20241007|r11176      |281|17:00|24:00|HbKeFtHtKkNnKvWz -AgWwNsYg                            |NASA|BONN|20241023|    |NASA|  15|
+|VGOS-OPS    |20241009|vo4283      |283|12:00|24:00|HbK2MgNnOeOwWsKeSaWn -WfGsYj                          |NASA|WETZ|20241105|    |NASA|  26|
+|IVS-R4      |20241010|r41176      |284|18:30|24:00|KkBdZcSvFtHtHbKeNnWz -YgWwNs                          |USNO|WASH|20241030|    |USNO|  19|
+|IVS-R1      |20241014|r11177      |288|17:00|24:00|HbKeIsFtHtKkNnKvWzSh -NsYg                            |NASA|BONN|20241028|    |NASA|  13|
+|IVS-CRF-DS  |20241015|crd133      |289|12:00|24:00|AgHhHo -WwOh                                          |DACH|WASH|Wt_med  |    |USNO|  23|
+|VGOS-OPS    |20241016|vo4290      |290|12:00|24:00|HbIsK2MgNnOeOwWfWsSaHvWn -GsKeYj                      |NASA|WASH|Wt_med  |    |NASA|  22|
+|IVS-R4      |20241017|r41177      |291|18:30|24:00|KkFtHtHbMaWzNn -YgKeWwNs                              |USNO|WASH|20241030|    |USNO|  12|
+|AUSTRAL     |20241018|aua117      |292|19:00|24:00|HtHbKe -WwYg                                          |DACH|UTAS|20241031|    |NASA|  12|
+|IVS-R1      |20241021|r11178      |295|17:00|24:00|HbKeIsFtHtKkMaNnWz -NsYgKv                            |NASA|BONN|20241105|    |NASA|  14|
+|IVS-OHIG    |20241022|ohg151      |296|17:30|24:00|AgFtHtKkSy -OhWw                                      |DACH|BONN|Wt_med  |    |BKG |  16|
+|VGOS-RD     |20241023|vr2404      |297|12:00|24:00|HbIsK2MgNnOeOwWfWsKeSaHvWn -GsYj                      |DACH|HAYS|Wt_med  |    |NASA|  15|
+|IVS-R4      |20241024|r41178      |298|18:30|24:00|KkFtHtHbKeMaWzNn -WwNsYg                              |USNO|WASH|Cleanup |    |USNO|  14|
+|IVS-R1      |20241028|r11179      |302|17:00|24:00|HbKeFtHtKkMaNnWzKv -IsNsYg                            |NASA|BONN|In_prog |    |NASA|  10|
+|IVS-R4      |20241031|r41179      |305|18:30|24:00|KkFtHtHbKeNn -NsYg                                    |USNO|WASH|In_prog |    |USNO|   7|
+--------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R1      |20241104|r11180      |309|17:00|24:00|HbKeFtHtKkMaNnWzKvIs -WwNsYg                          |NASA|BONN|Wt_med  |    |NASA|   3|
+|VGOS-OPS    |20241106|vo4311      |311|12:00|24:00|HbK2MgNnOeOwWfWsKeSaIsWnHv -GsYj                      |NASA|BONN|Wt_med  |    |NASA|   1|
+|IVS-R4      |20241107|r41180      |312|18:30|24:00|KkFtHtHbKeMaWzNn -WwNsYg                              |USNO|WASH|Wt_med  |    |USNO|   0|
+|IVS-R1      |20241111|r11181      |316|17:00|24:00|HbKeHtKkMaNnWzKvAgYgIs -Ns                            |NASA|BONN|        |    |NASA|  -4|
+|VGOS-OPS    |20241113|vo4318      |318|12:00|24:00|HbK2MgNnOeOwWfWsKeSaIs -GsYj                          |NASA|VIEN|        |    |NASA|  -6|
+|IVS-R4      |20241114|r41181      |319|18:30|24:00|KkHtHbKeMaWzNnYg -WwNs                                |USNO|WASH|        |    |USNO|  -7|
+|AUSTRAL     |20241115|aua118      |320|19:00|24:00|HtHbKeYg -Ww                                          |DACH|UTAS|        |    |NASA|  -8|
+|IVS-CRF     |20241118|crf145      |323|14:00|24:00|HhMaYsKm -Nt                                          |DACH|SHAO|        |    |USNO| -11|
+|IVS-R1      |20241118|r11182      |323|17:00|24:00|HbKeAgOnHtKkNnKvWzYg -Ns                              |NASA|BONN|        |    |NASA| -11|
+|IVS-RD      |20241119|rd2409      |324|17:30|24:00|FtHhKkMaOnWzKm -Ns                                    |OSO |SHAO|        |    |NASA| -12|
+|VGOS-OPS    |20241120|vo4325      |325|12:00|24:00|HbK2MgNnOeOwWfWsKeSaS6UmGs -IsYj                      |NASA|SHAO|        |    |NASA| -13|
+|IVS-RDV     |20241120|rv168       |325|18:00|24:00|VaHhHoOnShWz -Ns                                      |USNO|VLBA|        |    |USNO| -13|
+|IVS-R4      |20241121|r41182      |326|18:30|24:00|KkBdZcSvFtHtHbKeNnYgWz -WwMcNs                        |USNO|WASH|        |    |USNO| -14|
+|IVS-R1      |20241125|r11183      |330|17:00|24:00|FtAgOnHtKkKvWzHbKeYg -NnIsNs                          |NASA|BONN|        |    |NASA| -18|
+|IVS-CRF-DS  |20241127|crd134      |332|12:00|24:00|AgHhHo -OhWw                                          |DACH|WASH|        |    |USNO| -20|
+|IVS-R4      |20241128|r41183      |333|18:30|24:00|FtHtHbKeWzYgWz -NnWwMcNs                              |USNO|WASH|        |    |USNO| -21|
+|AOV         |20241129|aov096      |334|19:00|24:00|HbKeKmShUrVmYgKv -WwIsKg                              |UTAS|UTAS|        |    |NASA| -22|
+--------------------------------------------------------------------------------------------------------------------------------------------
+|IVS-R1      |20241202|r11184      |337|17:00|24:00|HbKeAgHtKkNnKvWzFtYg -IsNs                            |NASA|BONN|        |    |NASA| -25|
+|IVS-OHIG    |20241203|ohg152      |338|17:30|24:00|AgFtHtKkSyWw -Oh                                      |DACH|BONN|        |    |BKG | -26|
+|VGOS-OPS    |20241204|vo4339      |339|12:00|24:00|GsHbK2MgNnOeOwWfWsKeSa -IsYj                          |NASA|WASH|        |    |NASA| -27|
+|APSG        |20241204|apsg55      |339|18:00|24:00|HoKkKvShUrKm -Kg                                      |SHAO|SHAO|        |    |NASA| -27|
+|IVS-R4      |20241205|r41184      |340|18:30|24:00|KkBdZcFtHtHbKeMaWzNnWwYg -Ns                          |USNO|WASH|        |    |USNO| -28|
+|IVS-R1      |20241209|r11185      |344|17:00|24:00|IsAgOnHtKkMaNnKvWzFtHbKeYg -Ns                        |NASA|BONN|        |    |NASA| -32|
+|IVS-T2P     |20241210|t2p171      |345|17:30|24:00|AgBdEbFtHtHhKkMaVmNtKvShSvWzZc -McKgNs                |DACH|BONN|        |    |BKG | -33|
+|VGOS-OPS    |20241211|vo4346      |346|12:00|24:00|GsHbIsK2MgNnOeOwWfWsKeSa -Yj                          |NASA|BONN|        |    |NASA| -34|
+|IVS-RD      |20241211|rd2410      |346|18:00|24:00|FtHhKkOnWzT6Km -Ns                                    |OSO |SHAO|        |    |NASA| -34|
+|IVS-R4      |20241212|r41185      |347|18:30|24:00|KkBdZcHbKeNtWwFtHtYgWz -Ns                            |USNO|WASH|        |    |USNO| -35|
+|AUSTRAL     |20241213|aua119      |348|19:00|24:00|HtHbKeWwYg                                            |DACH|UTAS|        |    |NASA| -36|
+|IVS-R1      |20241216|r11186      |351|17:00|24:00|HbKeIsAgOnKkNnKvWzWwYg -Ns                            |NASA|BONN|        |    |NASA| -39|
+|VGOS-RD     |20241218|vr2405      |353|12:00|24:00|GsHbIsK2MgNnOeOwWfWsKeSa -Yj                          |DACH|HAYS|        |    |NASA| -41|
+|IVS-R4      |20241219|r41186      |354|18:30|24:00|KkBdZcSvHbKeWwNnHtYgWz -McNs                          |USNO|WASH|        |    |USNO| -42|
+|IVS-R1      |20241223|r11187      |358|17:00|24:00|IsHtKvBdSvZcWwShFt                                    |NASA|BONN|        |    |NASA| -46|
+|IVS-R4      |20241226|r41187      |361|18:30|24:00|KkFtUrBdZcSv                                          |USNO|WASH|        |    |USNO| -49|
+|IVS-R1      |20241230|r11188      |365|17:00|24:00|HtMaFtKvSh                                            |NASA|BONN|        |    |NASA| -53|
+--------------------------------------------------------------------------------------------------------------------------------------------
+## Master file format version 2.0           2022.11.01 CAD&CCT
