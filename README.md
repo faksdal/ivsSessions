@@ -7,6 +7,7 @@ Reads and lists ivs master files in the terminal. Not completely done yet, but i
 You should be able to make it using make in the terminal. You need of course the build tools installed on your system.
 
 It takes one parameter, -i "name of input file"
+
 The input file would be the master text files from https://ivscc.gsfc.nasa.gov/program/index.html
 
 
