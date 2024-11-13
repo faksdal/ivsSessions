@@ -5,6 +5,7 @@ Reads and lists ivs master files in the terminal. Not completely done yet, but i
 ## Description
 
 You should be able to make it using make in the terminal. You need of course the build tools installed on your system.
+Be adviced: make depends on two folders in builder root: "bin" and "obj"!
 
 It takes one parameter, -i "name of input file"
 
