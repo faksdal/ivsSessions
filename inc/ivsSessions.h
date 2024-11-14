@@ -160,6 +160,7 @@ private:
 	void	updateStatusLine(void);
 	unsigned long visibleSessions(void);
 	unsigned long	getFirstVisibleIndex(void);
+	void	openSessionOnline(const std::string& url);
 //////////////////////////// S E S S I O N L I S T /////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 

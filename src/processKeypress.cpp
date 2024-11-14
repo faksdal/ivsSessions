@@ -5,6 +5,7 @@
  *      Author: leijon
  */
 
+#include <string>
 #include <iostream>
 #include <unistd.h>
 #include "keymap.h"
@@ -18,6 +19,13 @@
 void ivsSessions::processKeypress(bool& _quit)
 {
 	int key = readkey(STDIN_FILENO);
+	std::string url;
+
+	if(b_intensiveFlag)
+		url.append("https://ivscc.gsfc.nasa.gov/sessions/intensive/2024/");
+	else
+		url.append("https://ivscc.gsfc.nasa.gov/sessions/2024/");
+
 
 	switch(key){
 		case TAB:			// Shifts focus to the next filter, updating cursor
@@ -70,9 +78,10 @@ void ivsSessions::processKeypress(bool& _quit)
 
 							// And we should be goooooood :-)
 							break;
-		//case 'v':			vl_sessionList[l_track.ul_current_highlighted_session].b_visible = false;
-		//					redrawSessions(0);
-		//					break;
+		case NUM_ENTER:
+		case KB_ENTER:		url.append(vl_sessionList[l_track.ul_current_highlighted_session].str_sessionCode.c_str(), 1, 7);
+							openSessionOnline(url);
+							break;
 
 		default:			// Advance the cursor location
 							// TODO: Edit this to stay within constraint...
