@@ -12,6 +12,7 @@
 
 void ivsSessions::applyFilter(void)
 {
+	//const char* str;
 	unsigned long row = d_bound.i_list_start_row;
 
 	// Clear the sessionlist from the screen
@@ -50,13 +51,13 @@ void ivsSessions::applyFilter(void)
 
 		// If item is visible, print it
 		if(vl_sessionList[i].b_visible){
-			printSession(row++, i, d_colors.str_default_color);
+			printFilteredSession(row++, i, d_colors.str_default_color,vl_filter[getActiveFilterIndex()].ft);
 		} // if(vl_sessionList[i].b_visible)
 
 		if(row > d_bound.i_list_end_row)
 			break;
 	} // for(unsigned long i = 0; i < vl_sessionList.size(); i++)
 
-	printSession(d_bound.i_list_start_row, getFirstVisibleIndex(), d_colors.str_list_highlighted_color);
-	updateListTracking(getFirstVisibleIndex(), getFirstVisibleIndex(), d_bound.i_list_start_row);
+	//printFilteredSession(d_bound.i_list_start_row, getFirstVisibleIndex(), d_colors.str_list_highlighted_color, vl_filter[getActiveFilterIndex()].ft);
+	//updateListTracking(getFirstVisibleIndex(), getFirstVisibleIndex(), d_bound.i_list_start_row);
 }

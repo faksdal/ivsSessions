@@ -167,6 +167,44 @@ private:
 
 
 ////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////// F I L T E R S /////////////////////////////////
+private:
+	enum class FilterTypes{	SESSION_TYPE,
+							DATE,
+							SESSION_CODE,
+							STATIONS};
+
+	class Filter{
+	public:
+		int			i_filterColumn, i_filterRow, i_fieldLength;
+		bool		b_active;
+		std::string	str_filterName, str_filterText, str_filterColor;
+		FilterTypes	ft;
+	};
+
+	std::vector<Filter>	vl_filter;
+
+	void	setupFilters(void);
+	void	addFilter(	int		_filterColumn,
+						int		_filterRow,
+						int		_fieldLength,
+						bool	_active,
+						std::string	_filterName,
+						std::string	_filterText,
+						std::string	_filterColor,
+						FilterTypes _ft);
+	void	setFocusActiveFilter(void);
+	void	nextFilter(void);
+	int		getActiveFilterIndex(void);
+	void	applyFilter(void);
+
+	//void	printFilters(void);
+//////////////////////////////// F I L T E R S /////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+////////////////////////////////////////////////////////////////////////////////
 ///////////////////////// T E R M I N A L  O U T P U T /////////////////////////
 private:
 
@@ -231,6 +269,10 @@ private:
 	void	printSession(	short _row,
 							unsigned long _sessionId,
 							std::string _sessionColor);
+	void	printFilteredSession(	short _row,
+									unsigned long _sessionId,
+									std::string _sessionColor,
+									FilterTypes _ft);
 
 	// Inline functions ////////////////////////////////////////////////////////
 	void	setColor(const std::string _color)
@@ -276,41 +318,6 @@ private:
 
 
 
-////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////// F I L T E R S /////////////////////////////////
-private:
-	enum class FilterTypes{	SESSION_TYPE,
-							DATE,
-							SESSION_CODE,
-							STATIONS};
-
-	class Filter{
-	public:
-		int			i_filterColumn, i_filterRow, i_fieldLength;
-		bool		b_active;
-		std::string	str_filterName, str_filterText, str_filterColor;
-		FilterTypes	ft;
-	};
-
-	std::vector<Filter>	vl_filter;
-
-	void	setupFilters(void);
-	void	addFilter(	int		_filterColumn,
-						int		_filterRow,
-						int		_fieldLength,
-						bool	_active,
-						std::string	_filterName,
-						std::string	_filterText,
-						std::string	_filterColor,
-						FilterTypes _ft);
-	void	setFocusActiveFilter(void);
-	void	nextFilter(void);
-	int		getActiveFilterIndex(void);
-	void	applyFilter(void);
-
-	//void	printFilters(void);
-//////////////////////////////// F I L T E R S /////////////////////////////////
-////////////////////////////////////////////////////////////////////////////////
 
 
 
