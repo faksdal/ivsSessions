@@ -58,6 +58,6 @@ void ivsSessions::applyFilter(void)
 			break;
 	} // for(unsigned long i = 0; i < vl_sessionList.size(); i++)
 
-	//printFilteredSession(d_bound.i_list_start_row, getFirstVisibleIndex(), d_colors.str_list_highlighted_color, vl_filter[getActiveFilterIndex()].ft);
-	//updateListTracking(getFirstVisibleIndex(), getFirstVisibleIndex(), d_bound.i_list_start_row);
+	printFilteredSession(d_bound.i_list_start_row, getFirstVisibleIndex(), d_colors.str_list_highlighted_color, vl_filter[getActiveFilterIndex()].ft);
+	updateListTracking(getFirstVisibleIndex(), getFirstVisibleIndex(), d_bound.i_list_start_row);
 }
