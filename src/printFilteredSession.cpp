@@ -20,6 +20,7 @@ void ivsSessions::printFilteredSession(short _row, unsigned long _sessionId, std
 	switch(vl_filter[getActiveFilterIndex()].ft){
 
 		case FilterTypes::SESSION_TYPE:		f_string = vl_sessionList[_sessionId].str_sessionType;
+
 											highlightIndex = f_string.find(vl_filter[getActiveFilterIndex()].str_filterText);
 											if(highlightIndex != std::string::npos){
 												//f_string.insert(highlightIndex, d_colors.str_list_highlighted_color);
@@ -46,6 +47,18 @@ void ivsSessions::printFilteredSession(short _row, unsigned long _sessionId, std
 															+	vl_sessionList[_sessionId].str_del);
 											break;
 		case FilterTypes::DATE:				f_string = vl_sessionList[_sessionId].str_date;
+
+											highlightIndex = f_string.find(vl_filter[getActiveFilterIndex()].str_filterText);
+											if(highlightIndex != std::string::npos){
+												//f_string.insert(highlightIndex, d_colors.str_list_highlighted_color);
+												f_string.insert(highlightIndex, "\033[30;102m");
+
+												//f_string.insert(highlightIndex + 14, _sessionColor);
+												f_string.insert(highlightIndex + 9 + vl_filter[getActiveFilterIndex()].str_filterText.length(), "\033[40;00m");
+												print(1, d_bound.i_list_end_row + 1, f_string.c_str());
+											}
+
+
 											print(1, _row,	_sessionColor
 															+	vl_sessionList[_sessionId].str_sessionType
 															+	f_string
@@ -62,6 +75,19 @@ void ivsSessions::printFilteredSession(short _row, unsigned long _sessionId, std
 															+	vl_sessionList[_sessionId].str_del);
 											break;
 		case FilterTypes::SESSION_CODE:		f_string = vl_sessionList[_sessionId].str_sessionCode;
+
+
+											highlightIndex = f_string.find(vl_filter[getActiveFilterIndex()].str_filterText);
+											if(highlightIndex != std::string::npos){
+												//f_string.insert(highlightIndex, d_colors.str_list_highlighted_color);
+												f_string.insert(highlightIndex, "\033[30;102m");
+
+												//f_string.insert(highlightIndex + 14, _sessionColor);
+												f_string.insert(highlightIndex + 9 + vl_filter[getActiveFilterIndex()].str_filterText.length(), "\033[40;00m");
+												print(1, d_bound.i_list_end_row + 1, f_string.c_str());
+											}
+
+
 											print(1, _row,	_sessionColor
 															+	vl_sessionList[_sessionId].str_sessionType
 															+	vl_sessionList[_sessionId].str_date
@@ -78,6 +104,19 @@ void ivsSessions::printFilteredSession(short _row, unsigned long _sessionId, std
 															+	vl_sessionList[_sessionId].str_del);
 											break;
 		case FilterTypes::STATIONS:			f_string = vl_sessionList[_sessionId].str_stations;
+
+
+											highlightIndex = f_string.find(vl_filter[getActiveFilterIndex()].str_filterText);
+											if(highlightIndex != std::string::npos){
+												//f_string.insert(highlightIndex, d_colors.str_list_highlighted_color);
+												f_string.insert(highlightIndex, "\033[30;102m");
+
+												//f_string.insert(highlightIndex + 14, _sessionColor);
+												f_string.insert(highlightIndex + 9 + vl_filter[getActiveFilterIndex()].str_filterText.length(), "\033[40;00m");
+												print(1, d_bound.i_list_end_row + 1, f_string.c_str());
+											}
+
+
 											print(1, _row,	_sessionColor
 															+	vl_sessionList[_sessionId].str_sessionType
 															+	vl_sessionList[_sessionId].str_date
